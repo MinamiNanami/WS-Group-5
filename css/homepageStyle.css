@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: red;
+    height: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.home {
+    justify-items: center;
+    align-content: center;
+    background-color: darkorchid;
+}
+
+ul {
+    display: flex;
+    margin-right: auto;
+    list-style-type: none;
+}
+
+li a {
+    font-size: 30px;
+}
+
+section h1 {
+    margin: 0;
+    padding: 0;
+}
+
+section.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: darkslategrey;
+}
