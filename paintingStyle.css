@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 235, 235, 0.521);
+}
+
+header {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /*background-color: aqua;*/
+    background-image: url('../WS Group 5/images/skypaintingsBackground.png');
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.nav-bar {
+    height: 10%;
+    width: 100%;
+    background-color: #FFFAEA;
+    top: 0%;
+    position: absolute;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    border-bottom: 5px solid #365f42;
+}
+
+.logo img {
+    width: 180px;
+    height: 60px;
+    margin-right: 800px;
+}
+
+.home img{
+    width: 45px;
+    height: 45px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.header-content h2 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 10px;
+    width: 500px;
+    border: 1px solid rgb(10, 70, 8);
+    border-radius: 5px;
+}
+
+/* Logo Container */
+.logo-container {
+    margin-top: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.logo-container img {
+    width: 350px;
+    height: 130px;
+}
+
+.logo-container p {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.main-section {
+    width: 100%;
+    /*background-color: blue;*/
+    height: flex;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Section Header */
+.gallery-title {
+    background-color: #d9d2b6; /* Beige background */
+    color: #5a5a5a; /* Dark gray text */
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 20px;
+    width: 400px; /* Keeps the box only as wide as the text */
+    border-radius: 5px;
+    margin-left: 400px; /* Aligns to the left */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+}
+
+/* Left Strip Effect */
+.gellery-title::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    background-color: #5a5a5a; /* Dark side strip */
+}
+
+.art-item {
+    display: flex;
+    flex-direction: column; /* Stack image and title */
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 250px; /* Adjust size as needed */
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.art-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.art-title {
+    margin-top: 8px;
+    font-weight: bold;
+    color: black;
+}

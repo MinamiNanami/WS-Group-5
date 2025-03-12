@@ -122,16 +122,6 @@ nav {
     /*background-color: darkorchid;*/
 }
 
-ul {
-    display: flex;
-    margin-right: auto;
-    list-style-type: none;
-}
-
-li a {
-    font-size: 30px;
-}
-
 .main-section {
     width: 100%;
     background-color: rgba(255, 235, 235, 0.521);
@@ -149,7 +139,7 @@ li a {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 10px;
-    background-color: green;
+    background-color: #768466;
     color: white;
     padding: 10px;
     border-radius: 20px;
@@ -157,6 +147,7 @@ li a {
     width: 180px;
     font-size: 15px;
     font-weight: bold;
+    border: none;
 }
 
 .dropdown-section option {
@@ -295,6 +286,7 @@ li a {
     align-items: center;
     overflow: hidden;
     transition: transform 0.3s;
+    flex-wrap: wrap;
 }
 
 .art-item img {
