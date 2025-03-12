@@ -145,8 +145,9 @@ header {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     width: 250px; /* Adjust size as needed */
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
 }
 
 .art-item img {
@@ -159,4 +160,10 @@ header {
     margin-top: 8px;
     font-weight: bold;
     color: black;
+}
+
+.footer-div {
+    background-color: #657855;
+    width: 100%;
+    height: 10%;
 }
