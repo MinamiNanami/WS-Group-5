@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #FFFAEA;
+}
+
+header {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /*background-color: aqua;*/
+    /*background-image: url('../WS Group 5/images/chessBackground.png');*/
+    background-size: cover;
+    height: 15vh;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.nav-bar {
+    height: 10%;
+    width: 100%;
+    background-color: #FFFAEA;
+    top: 0%;
+    position: absolute;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    border-bottom: 5px solid #365f42;
+}
+
+.logo img {
+    width: 180px;
+    height: 60px;
+    margin-right: 800px;
+}
+
+.home img {
+    width: 45px;
+    height: 45px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.back-button {
+    margin: 20px 0 0 40px;
+    color: #777;
+    font-size: 24px;
+}
+
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cart-container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: calc(100vh - 40px);
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-title {
+    font-size: 28px;
+    color: #4A4A4A;
+    font-weight: normal;
+}
+
+.order-select {
+    font-size: 24px;
+    color: #4A4A4A;
+    text-align: right;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-row {
+    border: 1px solid #B0B0B0;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-cell {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.item-desc {
+    color: #4A4A4A;
+    font-size: 14px;
+}
+
+.qty-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qty-btn {
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #4A4A4A;
+}
+
+.qty-value {
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: bold;
+    text-align: right;
+    font-size: 18px;
+}
+
+.checkout-container {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+}
+
+.checkout-btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: #2C5E2E;
+    border: 2px solid #2C5E2E;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+}
+
+.table-header {
+    text-align: right;
+    padding: 10px;
+    font-weight: normal;
+}
+
+.nav-bar select {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.item-image img {
+    width: 60px;
+    height: 60px;
+}
+
+.custom-checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border: 2px solid #8B7D6B;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.custom-checkbox:hover .checkmark {
+    background-color: #F5F1E8;
+}
+
+.custom-checkbox input:checked~.checkmark {
+    background-color: #F5F1E8;
+    border-color: #6B5B4B;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #6B5B4B;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Decorative elements */
+.checkmark:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 1px solid #D9CFC1;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.custom-checkbox input:checked~.checkmark:before {
+    opacity: 1;
+}

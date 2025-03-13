@@ -148,6 +148,7 @@ nav {
     font-size: 15px;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 }
 
 .dropdown-section option {
@@ -326,5 +327,6 @@ nav {
     -moz-appearance: none;
     background: none;
     font-weight: bold;
+    cursor: pointer;
     font-size: 20px;
 }

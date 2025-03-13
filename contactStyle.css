@@ -74,7 +74,7 @@ body {
     max-width: 900px;
     text-align: center;
     padding: 40px;
-    background-color: #FAF8EE; /* Match background */
+    background-color: #FFFAEA; /* Match background */
     margin-right: 5%;
 }
 
@@ -110,5 +110,6 @@ body {
     -moz-appearance: none;
     background: none;
     font-weight: bold;
+    cursor: pointer;
     font-size: 20px;
 }
