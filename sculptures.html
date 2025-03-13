@@ -16,8 +16,12 @@
             <a href="">About Us</a>
             <a href="contact.html">Contact Us</a>
             <a href="">Artist</a>
-            <a href="">Category</a>
-            <a href="">Cart</a>
+            <select id="pageSelect" onchange="navigateToPage()">
+                <option value="" disabled selected> Category </option>
+                <option value="painting.html">Paintings</option>
+                <option value="sculptures.html">Sculptures</option>
+                <option value="crafts.html">Crafts</option>
+            </select>            <a href="">Cart</a>
             <div class="home"><a href=""><img src="images/proficon.png"></a></div>
         </nav>
         <div class="header-content">
@@ -37,61 +41,61 @@
         </div>
         <div class="gallery">
             <div class="art-item">
-                <img src="images/flowerBase.png" alt="Art 1">
+                <a href="sculpture1.html"><img src="images/flowerBase.png" alt="Art 1"></a>
                 <p class="art-title">"Nevertheless"</p>
-                <p class="art-title">₱10,000</p>
+                <p class="art-title">₱10,000.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/dikoalam.png" alt="Art 2">
+                <a href="sculpture2.html"><img src="images/dikoalam.png" alt="Art 2"></a>
                 <p class="art-title">"Abstract Wood Sculpture"</p>
-                <p class="art-title">₱3,600</p>
+                <p class="art-title">₱3,600.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/spaceandshape.png" alt="Art 3">
+                <a href="sculpture3.html"><img src="images/spaceandshape.png" alt="Art 3"></a>
                 <p class="art-title">"Space and Shape"</p>
-                <p class="art-title">₱2,599</p>
+                <p class="art-title">₱2,599.00</p>
                 <br>
             </div>
         </div>
         <div class="gallery">
             <div class="art-item">
-                <img src="images/malayKO.png" alt="Art 1">
+                <a href="sculpture4.html"><img src="images/malayKO.png" alt="Art 4"></a>
                 <p class="art-title">"Owl Sculpture"</p>
-                <p class="art-title">₱1,550</p>
+                <p class="art-title">₱1,550.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/metalSculpture.png" alt="Art 2">
+                <a href="sculpture5.html"><img src="images/metalSculpture.png" alt="Art 5"></a>
                 <p class="art-title">"Metal Sculpture"</p>
-                <p class="art-title">₱2,350</p>
+                <p class="art-title">₱2,350.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/nagbbike.png" alt="Art 3">
+                <a href="sculpture6.html"><img src="images/nagbbike.png" alt="Art 6"></a>
                 <p class="art-title">"Bicycling People"</p>
-                <p class="art-title">₱1,200</p>
+                <p class="art-title">₱1,200.00</p>
                 <br>
             </div>
         </div>
         <div class="gallery">
             <div class="art-item">
-                <img src="images/nobody.png" alt="Art 1">
+                <a href="sculpture7.html"><img src="images/nobody.png" alt="Art 7"></a>
                 <p class="art-title">"Nobody"</p>
-                <p class="art-title">₱1,600</p>
+                <p class="art-title">₱1,600.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/observe.png" alt="Art 2">
+                <a href="sculpture8.html"><img src="images/observe.png" alt="Art 8"></a>
                 <p class="art-title">"Observe"</p>
-                <p class="art-title">₱3,449</p>
+                <p class="art-title">₱3,449.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/wood.png" alt="Art 3">
+                <a href="sculpture9.html"><img src="images/wood.png" alt="Art 9"></a>
                 <p class="art-title">"Wood Sculpture"</p>
-                <p class="art-title">₱5,750</p>
+                <p class="art-title">₱5,750.00</p>
                 <br>
             </div>
         </div>
@@ -103,5 +107,15 @@
         <br>
     </div>
 </body>
+
+<script>
+    function navigateToPage() {
+        var select = document.getElementById("pageSelect");
+        var url = select.value;
+        if (url) {
+            window.location.href = url; // Redirects to the selected page (HTML file)
+        }
+    }
+    </script>
 
 </html>

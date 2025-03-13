@@ -9,7 +9,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 235, 235, 0.521);
+    background-color: #FFFAEA;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
     display: flex;
     align-items: center;
     /*background-color: aqua;*/
-    /*background-image: url('../WS Group 5/images/chessBackground.png');*/
+    /*background-image: url('images/chessBackground.png');*/
     background-size: cover;
     height: 60vh;
     width: 100%;
@@ -61,7 +61,7 @@ header {
 }
 /* Page background */
 body {
-    background-color: #FAF8EE; /* Light beige background */
+    background-color: #FFFAEA; /* Light beige background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,4 +101,14 @@ body {
     color: #333;
     margin-top: 5px;
     line-height: 1.5;
+}
+
+.nav-bar select {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    font-weight: bold;
+    font-size: 20px;
 }

@@ -17,26 +17,30 @@
             <a href="">About Us</a>
             <a href="contact.html">Contact Us</a>
             <a href="">Artist</a>
-            <a href="">Category</a>
-            <a href="">Cart</a>
+            <select id="pageSelect" onchange="navigateToPage()">
+                <option value="" disabled selected> Category </option>
+                <option value="painting.html">Paintings</option>
+                <option value="sculptures.html">Sculptures</option>
+                <option value="crafts.html">Crafts</option>
+            </select>            <a href="">Cart</a>
             <div class="home"><a href=""><img src="images/proficon.png"></a></div>
         </nav>
     </header>
 
     <div class="back-button">
-        <a href="crafts.html">
+        <a href="sculptures.html">
         ←
         </a>
     </div>
 
     <div class="main-container">
         <div class="product-container">
-            <div class="price-tag">800.00</div>
+            <div class="price-tag">₱5,750.00</div>
             <div class="product-image">
-                <img src="images/phearring.png" alt="Filipino Flag Inspired ear piercing">
+                <img src="images/wood.png" alt="Filipino Flag Inspired ear piercing">
             </div>
             <div class="product-title">
-                "Filipino Flag Inspired ear piercing"
+                "Wood Sculpture"
             </div>
             <div class="button-container">
                 <button class="add-to-cart">ADD TO CART</button>
@@ -67,5 +71,15 @@
         </div>
     </div>
 </body>
+
+<script>
+    function navigateToPage() {
+        var select = document.getElementById("pageSelect");
+        var url = select.value;
+        if (url) {
+            window.location.href = url; // Redirects to the selected page (HTML file)
+        }
+    }
+    </script>
 
 </html>

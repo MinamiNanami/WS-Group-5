@@ -9,15 +9,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 235, 235, 0.521);
+    background-color: #FFFAEA;
 }
 
 header {
     justify-content: center;
     display: flex;
     align-items: center;
-    /*background-color: aqua;*/
-    background-image: url('../WS Group 5/images/skypaintingsBackground.png');
+    background-color: rgb(255, 250, 234);
+    background-image: url('images/skypaintingsBackground.png');
     background-size: cover;
     height: 60vh;
     width: 100%;
@@ -97,6 +97,7 @@ header {
     width: 100%;
     /*background-color: blue;*/
     height: flex;
+    background-color: #FFFAEA;
 }
 
 .gallery {
@@ -166,4 +167,14 @@ header {
     background-color: #657855;
     width: 100%;
     height: 10%;
+}
+
+.nav-bar select {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    font-weight: bold;
+    font-size: 20px;
 }

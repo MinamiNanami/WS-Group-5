@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #faf7e8;
+    background-color: #FFFAEA;
 }
 
 header {
@@ -78,7 +78,7 @@ header {
     position: absolute;
     top: 0;
     right: 20px;
-    background-color: white;
+    background-color: #FFFAEA;
     padding: 5px 15px;
     border: 1px solid #e0e0d1;
     border-top: none;
@@ -172,12 +172,14 @@ header {
     color: #3a423a;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 25px;
 }
 
 .description-text {
     text-align: justify;
     line-height: 1.6;
     margin-bottom: 20px;
+    font-size: 19px;
 }
 
 .materials {
@@ -187,6 +189,7 @@ header {
 
 .materials p {
     margin: 10px 0;
+    font-size: 19px;
 }
 
 .artist-section {
@@ -199,8 +202,19 @@ header {
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
+    font-size: 19px;
 }
 
 .back-button a{
     text-decoration: none;
+}
+
+.nav-bar select {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    font-weight: bold;
+    font-size: 20px;
 }

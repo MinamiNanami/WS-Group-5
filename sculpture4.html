@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipino Flag Inspired ear piercing - Palette</title>
+    <link rel="stylesheet" href="productpageStyle.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <di class="home"><a href="homepage.html"><img src="images/home.png" alt=""></a></di>
+            <div class="logo"><img src="images/PHpalleteLogo.png" alt="ph-pallete-logo"></div>
+            <a href="">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="">Artist</a>
+            <select id="pageSelect" onchange="navigateToPage()">
+                <option value="" disabled selected> Category </option>
+                <option value="painting.html">Paintings</option>
+                <option value="sculptures.html">Sculptures</option>
+                <option value="crafts.html">Crafts</option>
+            </select>            <a href="">Cart</a>
+            <div class="home"><a href=""><img src="images/proficon.png"></a></div>
+        </nav>
+    </header>
+
+    <div class="back-button">
+        <a href="sculptures.html">
+        ←
+        </a>
+    </div>
+
+    <div class="main-container">
+        <div class="product-container">
+            <div class="price-tag">₱1,550.00</div>
+            <div class="product-image">
+                <img src="images/malayKO.png" alt="Filipino Flag Inspired ear piercing">
+            </div>
+            <div class="product-title">
+                "Owl Sculpture"
+            </div>
+            <div class="button-container">
+                <button class="add-to-cart">ADD TO CART</button>
+                <button class="buy-now">BUY NOW</button>
+            </div>
+        </div>
+
+        <div class="description-container">
+            <h2 class="section-title">Description</h2>
+            <p class="description-text">
+                Filipino ear piercing designs blend indigenous, colonial, and modern influences, featuring elements like
+                tribal engravings, gold hoops, and pearl studs. Traditional styles often showcase nature-inspired
+                patterns or materials like wood, shells, and beads, reflecting the country's rich cultural heritage.
+                Contemporary designs incorporate Baybayin script, sun-and-stars motifs, and minimalist wave or fan
+                shapes, symbolizing Filipino identity and artistry.
+            </p>
+
+            <h2 class="section-title">Materials</h2>
+            <div class="materials">
+                <p>14¼×21¼in. - 37.5×54.9cm</p>
+                <p>Watercolour on 140lb/300gsm paper</p>
+            </div>
+
+            <div class="artist-section">
+                <h2 class="section-title">Artist</h2>
+                <div class="artist-name">JUAN DELA CRUZ</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function navigateToPage() {
+        var select = document.getElementById("pageSelect");
+        var url = select.value;
+        if (url) {
+            window.location.href = url; // Redirects to the selected page (HTML file)
+        }
+    }
+    </script>
+
+</html>

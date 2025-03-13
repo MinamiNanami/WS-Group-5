@@ -16,7 +16,12 @@
             <a href="">About Us</a>
             <a href="contact.html">Contact Us</a>
             <a href="">Artist</a>
-            <a href="">Category</a>
+            <select id="pageSelect" onchange="navigateToPage()">
+                <option value="" disabled selected> Category </option>
+                <option value="painting.html">Paintings</option>
+                <option value="sculptures.html">Sculptures</option>
+                <option value="crafts.html">Crafts</option>
+            </select>
             <a href="">Cart</a>
             <div class="home"><a href=""><img src="images/proficon.png"></a></div>
         </nav>
@@ -37,19 +42,19 @@
         </div>
         <div class="gallery">
             <div class="art-item">
-                <a href="productpage.html"><img src="images/phearring.png" alt="Art 1"></a>
+                <a href="craftwork1.html"><img src="images/phearring.png" alt="Art 1"></a>
                 <p class="art-title">"Filipino Flag Earring"</p>
                 <p class="art-title">₱800.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/pinebasket.png" alt="Art 2">
+                <a href="craftwork2.html"><img src="images/pinebasket.png" alt="Art 2"></a>
                 <p class="art-title">"Pine Needle Basket"</p>
                 <p class="art-title">₱300.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/handfan.png" alt="Art 3">
+                <a href="craftwork3.html"><img src="images/handfan.png" alt="Art 3"></a>
                 <p class="art-title">"Embroidered Hand Fan"</p>
                 <p class="art-title">₱120.00</p>
                 <br>
@@ -57,19 +62,19 @@
         </div>
         <div class="gallery">
             <div class="art-item">
-                <img src="images/shawl.png" alt="Art 1">
+                <a href="craftwork4.html"><img src="images/shawl.png" alt="Art 4"></a>
                 <p class="art-title">"Sheep Wool Shawl"</p>
                 <p class="art-title">₱499.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/metalbadge.png" alt="Art 2">
+                <a href="craftwork5.html"><img src="images/metalbadge.png" alt="Art 5"></a>
                 <p class="art-title">"PH Metal Badge"</p>
                 <p class="art-title">₱400</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/parol.png" alt="Art 3">
+                <a href="craftwork6.html"><img src="images/parol.png" alt="Art 6"></a>
                 <p class="art-title">"Lace Parol"</p>
                 <p class="art-title">₱230.00</p>
                 <br>
@@ -77,19 +82,19 @@
         </div>
         <div class="gallery">
             <div class="art-item">
-                <img src="images/walldecor.png" alt="Art 1">
+                <a href="craftwork7.html"><img src="images/walldecor.png" alt="Art 7"></a>
                 <p class="art-title">"Wall Decoration"</p>
                 <p class="art-title">₱250.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/wovenwonders.png" alt="Art 2">
+                <a href="craftwork8.html"><img src="images/wovenwonders.png" alt="Art 8"></a>
                 <p class="art-title">"Woven Wonders"</p>
                 <p class="art-title">₱300.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="images/bridesmaid.png " alt="Art 3">
+                <a href="craftwork9.html"><img src="images/bridesmaid.png " alt="Art 9"></a>
                 <p class="art-title">"Fan Bouquet Bridesmaid"</p>
                 <p class="art-title">₱450.00</p>
                 <br>
@@ -103,5 +108,16 @@
         <br>
     </div>
 </body>
+
+<script>
+    function navigateToPage() {
+        var select = document.getElementById("pageSelect");
+        var url = select.value;
+        if (url) {
+            window.location.href = url; // Redirects to the selected page (HTML file)
+        }
+    }
+    </script>
+
 
 </html>

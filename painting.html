@@ -11,14 +11,19 @@
 <body>
     <header>
         <nav class="nav-bar">
-            <div class="home"><a href="homepage.html"><img src="../WS Group 5/images/home.png" alt=""></a></div>
+            <div class="home"><a href="homepage.html"><img src="images/home.png" alt=""></a></div>
             <div class="logo"><img src="../WS Group 5/images/PHpalleteLogo.png" alt="ph-pallete-logo"></div>
             <a href="">About Us</a>
             <a href="contact.html">Contact Us</a>
             <a href="">Artist</a>
-            <a href="">Category</a>
+            <select id="pageSelect" onchange="navigateToPage()">
+                <option value="" disabled selected> Category </option>
+                <option value="painting.html">Paintings</option>
+                <option value="sculptures.html">Sculptures</option>
+                <option value="crafts.html">Crafts</option>
+            </select> 
             <a href="">Cart</a>
-            <div class="home"><a href=""><img src="../WS Group 5/images/proficon.png"></a></div>
+            <div class="home"><a href=""><img src="images/proficon.png"></a></div>
         </nav>
         <div class="header-content">
             <h2>A FEAST FOR THE EYES - EXPLORE STUNNING ARTWORKS<br>
@@ -27,7 +32,7 @@
             <input type="text" class="search-bar" placeholder="Search...">
 
             <div class="logo-container">
-                <img src="../WS Group 5/images/PHpalleteLogo.png" alt="Palette Logo" class="logo">
+                <img src="images/PHpalleteLogo.png" alt="Palette Logo" class="logo">
                 <p>Art Gallery and Marketplace for Showcasing Filipino Artistry</p>
             </div>
         </div>
@@ -38,61 +43,61 @@
         </div>
         <div class="gallery">
             <div class="art-item">
-                <img src="../WS Group 5/images/noli.png" alt="Art 1">
+                <a href="painting1.html"><img src="images/noli.png" alt="Art 1"></a>
                 <p class="art-title">"Noli me Tangere"</p>
-                <p class="art-title">₱800.00</p>
+                <p class="art-title">₱13,000.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="../WS Group 5/images/palosebo.png" alt="Art 2">
+                <a href="painting2.html"><img src="images/palosebo.png" alt="Art 2"></a>
                 <p class="art-title">"Palosebo"</p>
-                <p class="art-title">₱800.00</p>
+                <p class="art-title">₱10,000.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="../WS Group 5/images/chain.png" alt="Art 3">
+                <a href="painting3.html"><img src="images/chain.png" alt="Art 3"></a>
                 <p class="art-title">"After the Chains"</p>
-                <p class="art-title">₱800.00</p>
+                <p class="art-title">₱2,000.00</p>
                 <br>
             </div>
         </div>
         <div class="gallery">
             <div class="art-item">
-                <img src="../WS Group 5/images/mahal.png" alt="Art 1">
+                <a href="painting4.html"><img src="images/mahal.png" alt="Art 4"></a>
                 <p class="art-title">"Pilipinas kong Mahal"</p>
-                <p class="art-title">₱800.00</p>
+                <p class="art-title">₱13,500.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="../WS Group 5/images/bata.png" alt="Art 2">
+                <a href="painting5.html"><img src="images/bata.png" alt="Art 5"></a>
                 <p class="art-title">"Mother and Child"</p>
-                <p class="art-title">₱800.00</p>
+                <p class="art-title">₱8,000.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="../WS Group 5/images/capitan.png" alt="Art 3">
+                <a href="painting6.html"><img src="images/capitan.png" alt="Art 6"></a>
                 <p class="art-title">"Capitan Del Barrio"</p>
-                <p class="art-title">₱800.00</p>
+                <p class="art-title">₱22,599.00</p>
                 <br>
             </div>
         </div>
         <div class="gallery">
             <div class="art-item">
-                <img src="../WS Group 5/images/cavite.png" alt="Art 1">
+                <a href="painting7.html"><img src="images/cavite.png" alt="Art 7"></a>
                 <p class="art-title">"Cavite (1958")</p>
-                <p class="art-title">₱800.00</p>
+                <p class="art-title">₱3,150.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="../WS Group 5/images/mud.png" alt="Art 2">
+                <a href="painting8.html"><img src="images/mud.png" alt="Art 8"></a>
                 <p class="art-title">"Mud Painting"</p>
-                <p class="art-title">₱800.00</p>
+                <p class="art-title">₱1,850.00</p>
                 <br>
             </div>
             <div class="art-item">
-                <img src="../WS Group 5/images/eagle.png" alt="Art 3">
+                <a href="painting9.html"><img src="images/eagle.png" alt="Art 9"></a>
                 <p class="art-title">"Philippine Eagle"</p>
-                <p class="art-title">₱800.00</p>
+                <p class="art-title">₱1,000.00</p>
                 <br>
             </div>
         </div>
@@ -104,5 +109,15 @@
         <br>
     </div>
 </body>
+
+<script>
+    function navigateToPage() {
+        var select = document.getElementById("pageSelect");
+        var url = select.value;
+        if (url) {
+            window.location.href = url; // Redirects to the selected page (HTML file)
+        }
+    }
+</script>
 
 </html>
