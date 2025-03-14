@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Carousel with Arrows</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .carousel {
+            height: 400px;
+            position: relative;
+        }
+        
+        .carousel img {
+          border-radius: 50%;
+          border: 2px solid lightgray;
+        }
+
+        .carousel-item img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel .carousel-item {
+            transform: scale(0.7); /* Smaller for non-active items */
+            opacity: 2; /* Less visible for non-active items */
+        }
+
+        .carousel .carousel-item.active {
+            transform: scale(1); /* Full size for the active item */
+            opacity: 1;
+        }
+
+        .carousel-item {
+            opacity: 1;
+        }
+
+        /* Arrows */
+        .carousel-arrow {
+            background-color: rgb(126,126,126, 0.5);
+            padding: 0 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .carousel-arrow.left {
+            left: 10px;
+        }
+
+        .carousel-arrow.right {
+            right: 10px;
+        }
+
+        .carousel-arrow:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>3D Carousel with Arrows</h3>
+        <div class="carousel">
+            <a class="carousel-item" href="#one!"><img src="images/malaykosino.png" alt="Image 1"></a>
+            <a class="carousel-item" href="#two!"><img src="images/malaykosino.png" alt="Image 2"></a>
+            <a class="carousel-item" href="#three!"><img src="images/malaykosino.png" alt="Image 3"></a>
+            <a class="carousel-item" href="#four!"><img src="images/malaykosino.png" alt="Image 4"></a>
+            <a class="carousel-item" href="#five!"><img src="images/malaykosino.png" alt="Image 5"></a>
+            <a class="carousel-item" href="#six!"><img src="images/malaykosino.png" alt="Image 6"></a>
+            <a class="carousel-item" href="#seven!"><img src="images/malaykosino.png" alt="Image 7"></a>
+        </div>
+        <!-- Arrows -->
+        <div class="carousel-arrow left" id="carousel-prev">&lt;</div>
+        <div class="carousel-arrow right" id="carousel-next">&gt;</div>
+    </div>
+
+    <script>
+        // Initialize the carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: false,
+                indicators: true,
+                dist: -100, // Controls the 3D effect
+                padding: 50, // Adds padding between images
+                numVisible: 7 // Number of items visible in the carousel
+            });
+
+            // Arrow navigation
+            const prev = document.getElementById('carousel-prev');
+            const next = document.getElementById('carousel-next');
+            const instance = M.Carousel.getInstance(elems[0]);
+
+            prev.addEventListener('click', () => instance.prev());
+            next.addEventListener('click', () => instance.next());
+        });
+    </script>
+</body>
+</html>
