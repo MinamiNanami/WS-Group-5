@@ -12,11 +12,14 @@ body {
     background-color: #FFFAEA;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 header {
     justify-content: center;
     display: flex;
     align-items: center;
-    /*background-color: aqua;*/
     background-image: url('images/chessBackground.png');
     background-size: cover;
     height: 60vh;
@@ -25,33 +28,78 @@ header {
 }
 
 .nav-bar {
+    position: absolute;
+    display: flex;
+    align-items: center;
     height: 10%;
     width: 100%;
-    background-color: #FFFAEA;
     top: 0%;
-    position: absolute;
-    align-items: center;
-    justify-content: space-evenly;
-    display: flex;
+    padding: 0 73px 0 71px;
     border-bottom: 5px solid #365f42;
+    background-color: #FFFAEA;
+}
+
+.logo {
+    height: 100%;
+    margin-right: auto;
 }
 
 .logo img {
-    width: 180px;
-    height: 60px;
-    margin-right: 800px;
+    height: 100%;
+    margin-left: -25px;
+    margin-top: -4px;
 }
 
-.home img{
+.home-logo img {
     width: 45px;
     height: 45px;
+    margin-bottom: -6px;
+}
+
+.nav-container {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 58.6%;
 }
 
 .nav-bar a {
     text-decoration: none;
-    color: black;
+    color: #0E1317;
     font-size: 20px;
     font-weight: bold;
+}
+
+#home {
+    justify-items: center;
+    align-content: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 -3px -3px 47px;
+}
+
+#home-img-border {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70%;
+    aspect-ratio: 1/1;
+    margin-right: -12px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #355E3B; /* Shadow effect */
+    background-color: #355E3B;
+}
+
+#home img {
+    position: absolute;
+    left: -1px;
+    top: 2px;
+    height: 104%;
+    aspect-ratio: 1/1;
+    border-radius: 50
 }
 
 .header-content {
