@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    aspect-ratio: 10 / 2; 
+}
+
+.carousel-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 14%;
+    padding: 0 20px;
+    aspect-ratio: 1/1;
+    transition: all 0.5s;
+}
+
+.carousel-item p {
+    position: absolute;
+    bottom: 0;
+}
+.carousel-item .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px green solid;
+    background-color: darkorange;
+}
+
+.carousel-item img {
+    height: 110%;
+    width: 110%;
+    margin-bottom: -5px;
+    transition: all 0.5s;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    user-select: none;
+}
+
+.carousel-arrow.left {
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    right: 10px;
+}

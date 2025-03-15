@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    width: 0;
+}
+
+.main-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 10px;
+    background-color: gray;
+}
+
+.team-info {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #F5F3ED;
+}
+
+.team-head {
+    box-sizing: border-box;
+    align-content: center;
+    height: 6.5%;
+    width: 100%;
+    padding: 0 12px;
+}
+
+.custom-rectangle {
+    width: 370px;
+    height: 25px;
+    border-radius: 4px 10px 0 4px;
+    background-color: #657855;
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+}
+
+.team-content {
+    display: flex;
+    height: 93.5%;
+    width: 100%;
+}
+
+.image-section {
+    justify-items: center;
+    height: 85%;
+    width: 40%;
+}
+
+.back-arrow {
+    align-content: center;
+    height: 7%;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.back-arrow a {
+    height: 100%;
+    width: 100%;
+}
+
+.back-arrow img {
+    height: 85%;
+    aspect-ratio: 1/1;
+    opacity: 50%;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    aspect-ratio: 1/1;
+    margin-top: 15px;
+    border: 3px solid #657855;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: ivory;
+}
+
+.image img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.name-role {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.name-role h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.name-role h5 {
+    margin: 5px 0 10px;
+    padding: 0;
+    font-family: 'Kaisei Decol';
+    font-weight: 100;
+}
+
+.name-role-underline {
+    height: 3px;
+    width: 65%;
+    margin-bottom: auto;
+    background: linear-gradient(to right, rgba(128, 128, 128, 0.1) 0%, rgb(95, 95, 95, 0.7) 45%, rgb(95, 95, 95, 0.7) 55%, rgba(128, 128, 128, 0.1) 100%);
+}
+
+.ph-pallete {
+    height: 200px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.ph-pallete img {
+    height: 100%;
+}
+
+.info-section {
+    height:85%;
+    width: 60%;
+}
+
+.info-intro {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 40px;
+    padding-right: 50px;
+}
+
+.info-intro p {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-size: 26px;
+    font-family: 'Kaisei Decol';
+}
+
+.info-obj {
+    align-content: center;
+    height: 14%;
+}
+
+.info-obj p {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.info-content {
+    display: flex;
+    height: fit-content;
+    margin-right: 20px;
+}
+
+.info-name {
+    margin-right: 50px;
+}
+
+.info-name p {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.info p {
+    margin: 0;
+    padding: 0;
+    font-size: 20px
+}

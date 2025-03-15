@@ -1,0 +1,33 @@
+<script>
+        const track = document.getElementById('carouselTrack');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+
+        // Move to the next image
+        next.addEventListener('click', () => {
+            // Move the first image to the end
+            const firstItem = track.firstElementChild;
+            track.style.transition = 'none'; // Disable transition for DOM rearrangement
+            track.appendChild(firstItem);
+
+            // Enable smooth transition
+            setTimeout(() => {
+                track.style.transition = 'transform 0.3s ease';
+                track.style.transform = 'translateX(0)';
+            }, 50);
+        });
+
+        // Move to the previous image
+        prev.addEventListener('click', () => {
+            // Move the last image to the front
+            const lastItem = track.lastElementChild;
+            track.style.transition = 'none'; // Disable transition for DOM rearrangement
+            track.insertBefore(lastItem, track.firstElementChild);
+
+            // Enable smooth transition
+            setTimeout(() => {
+                track.style.transition = 'transform 0.3s ease';
+                track.style.transform = 'translateX(0)';
+            }, 50);
+        });
+    </script>
