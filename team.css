@@ -112,7 +112,7 @@ body::-webkit-scrollbar {
 .carousel-container {
     height: 65%;
     width: 100%;
-    background-color: rgb(128, 167, 21);
+    /*background-color: rgb(128, 167, 21);*/
 }
 
 .team-title {
