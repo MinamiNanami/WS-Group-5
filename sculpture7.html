@@ -44,7 +44,7 @@
                 "Nobody"
             </div>
             <div class="button-container">
-                <a href="cart.html"><button class="add-to-cart">ADD TO CART</button></a>
+                <button class="add-to-cart" onclick="showPopup()">ADD TO CART</button>
                 <button class="buy-now">BUY NOW</button>
             </div>
         </div>
@@ -71,6 +71,16 @@
             </div>
         </div>
     </div>
+    <div id="popupOverlay" class="overlay">
+        <div class="popup-container">
+            <p>ADDED TO CART</p>
+            <div class="align">
+                <div class="checkmark-container">
+                    <span class="checkmark">&#10004;</span> <!-- Unicode checkmark -->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script>
@@ -80,6 +90,19 @@
         if (url) {
             window.location.href = url; // Redirects to the selected page (HTML file)
         }
+    }
+
+    function showPopup() {
+        var popup = document.getElementById("popupOverlay");
+        popup.classList.add("show");
+
+        // Auto-close after 3 seconds
+        setTimeout(closePopup, 1000);
+    }
+
+    function closePopup() {
+        var popup = document.getElementById("popupOverlay");
+        popup.classList.remove("show");
     }
     </script>
 

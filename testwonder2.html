@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Example</title>
+    <style>
+        /* Style for the button */
+        .show-popup-btn {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Overlay background */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        /* Popup box */
+        .popup-container {
+            background: lightgreen;
+            border: 2px solid darkgreen;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            min-width: 250px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        /* Show popup */
+        .show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .checkmark-container {
+            width: 80px;
+            height: 80px;
+            background-color: #4CAF50;
+            /* Green color */
+            border-radius: 50%;
+            /* Makes it a circle */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkmark {
+            font-size: 40px;
+            color: #d4ffd4;
+            /* Light green */
+            font-weight: bold;
+        }
+
+        .align {
+            width: 100%;
+            height: 100%;
+            /*background-color: black;*/
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Button to Show Popup -->
+    <button class="show-popup-btn" onclick="showPopup()">Show Popup</button>
+
+    <!-- Popup Container (No Close Button) -->
+    <div id="popupOverlay" class="overlay">
+        <div class="popup-container">
+            <p>ADDED TO CART</p>
+            <div class="align">
+                <div class="checkmark-container">
+                    <span class="checkmark">&#10004;</span> <!-- Unicode checkmark -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function showPopup() {
+            var popup = document.getElementById("popupOverlay");
+            popup.classList.add("show");
+
+            // Auto-close after 1 seconds
+            setTimeout(closePopup, 1000);
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("popupOverlay");
+            popup.classList.remove("show");
+        }
+    </script>
+
+</body>
+
+</html>
