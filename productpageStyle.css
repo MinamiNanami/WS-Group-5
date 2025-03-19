@@ -37,45 +37,6 @@ header {
     top: 0%;
     padding: 0 73px 0 71px;
     border-bottom: 5px solid #365f42;
-    background-color: #FFFAEA;
-}
-
-.logo {
-    height: 100%;
-    margin-right: auto;
-}
-
-.logo img {
-    height: 100%;
-    margin-left: -25px;
-    margin-top: -4px;
-}
-
-.home-logo img {
-    width: 45px;
-    height: 45px;
-    margin-bottom: -6px;
-}
-
-.nav-container {
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 58.6%;
-}
-
-.nav-bar {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    height: 10%;
-    width: 100%;
-    top: 0%;
-    padding: 0 73px 0 71px;
-    border-bottom: 5px solid #365f42;
-    background-color: #FFFAEA;
 }
 
 .logo {
@@ -108,7 +69,7 @@ header {
     text-decoration: none;
     color: #0E1317;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 #home {

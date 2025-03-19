@@ -2,13 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems, {
         fullWidth: false,
-        dist: -40,
-        padding: 170,
+        dist: -25,
+        shift: -20,
+        padding: 120,
         numVisible: 7
     });
 
-    const prev = document.getElementById('carousel-prev');
-    const next = document.getElementById('carousel-next');
+    const prev = document.getElementById('car-prev');
+    const next = document.getElementById('car-next');
     const instance = M.Carousel.getInstance(elems[0]);
 
     function setOpacityTo100() {
@@ -30,4 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     setOpacityTo100();
-    });
+});
+
+function navigateToPage(selectElement) {
+    const selectedValue = selectElement.value;
+    if (selectedValue) {
+        window.location.href = selectedValue;
+    }
+}
