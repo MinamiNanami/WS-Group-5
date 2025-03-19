@@ -226,6 +226,12 @@ header {
     overflow: hidden;
 }
 
+.artwork-frame img{
+    width: 500px;
+    height: 500px;
+    margin-left: 40.5px;
+}
+
 .artwork-frame::before {
     content: "";
     position: absolute;

@@ -1,0 +1,380 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFAEA;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /*background-color: aqua;*/
+    /*background-image: url('../WS Group 5/images/chessBackground.png');*/
+    background-size: cover;
+    height: 15vh;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.nav-bar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    top: 0%;
+    padding: 0 73px 0 71px;
+    border-bottom: 5px solid #365f42;
+    background-color: #FFFAEA;
+}
+
+.logo {
+    height: 100%;
+    margin-right: auto;
+}
+
+.logo img {
+    height: 100%;
+    margin-left: -25px;
+    margin-top: -4px;
+}
+
+.home-logo img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: -6px;
+}
+
+.nav-container {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 58.6%;
+}
+
+.nav-bar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    top: 0%;
+    padding: 0 73px 0 71px;
+    border-bottom: 5px solid #365f42;
+    background-color: #FFFAEA;
+}
+
+.logo {
+    height: 100%;
+    margin-right: auto;
+}
+
+.logo img {
+    height: 100%;
+    margin-left: -25px;
+    margin-top: -4px;
+}
+
+.home-logo img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: -6px;
+}
+
+.nav-container {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 58.6%;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #0E1317;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#home {
+    justify-items: center;
+    align-content: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 -3px -3px 47px;
+}
+
+#home-img-border {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70%;
+    aspect-ratio: 1/1;
+    margin-right: -12px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #355E3B; /* Shadow effect */
+    background-color: #355E3B;
+}
+
+#home img {
+    position: absolute;
+    left: -1px;
+    top: 2px;
+    height: 104%;
+    aspect-ratio: 1/1;
+    border-radius: 50
+}
+
+
+.back-button {
+    margin: 20px 0 0 40px;
+    color: #777;
+    font-size: 24px;
+}
+
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-container {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    border: 1px solid #e0e0d1;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.price-tag {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #FFFAEA;
+    padding: 5px 15px;
+    border: 1px solid #e0e0d1;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #3498db;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-title {
+    background-color: #3a423a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 300px;
+    position: relative;
+}
+
+.product-title::before,
+.product-title::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #e0e0d1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.product-title::before {
+    left: 10px;
+}
+
+.product-title::after {
+    right: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.add-to-cart,
+.buy-now {
+    padding: 10px 15px;
+    border: 1px solid #3a423a;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.add-to-cart {
+    background-color: white;
+    color: #3a423a;
+}
+
+.buy-now {
+    background-color: white;
+    color: #3a423a;
+}
+
+.description-container {
+    flex: 1;
+    background-color: #f7f5e8;
+    padding: 20px;
+    border-radius: 10px;
+    height: 500px;
+    width: 500px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 20px 0;
+    color: #3a423a;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.description-text {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.materials {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.materials p {
+    margin: 10px 0;
+    font-size: 19px;
+}
+
+.artist-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.artist-name {
+    background-color: #e8e8e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 19px;
+}
+
+.back-button a {
+    text-decoration: none;
+}
+
+.nav-bar select {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Overlay background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.1s ease, visibility 0.1s ease;
+}
+
+/* Popup box */
+.popup-container {
+    background: lightgreen;
+    border: 2px solid darkgreen;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-width: 250px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.popup-container p {
+    margin-bottom: 10px;
+}
+
+/* Show popup */
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.checkmark-container {
+    width: 80px;
+    height: 80px;
+    background-color: #4CAF50;
+    /* Green color */
+    border-radius: 50%;
+    /* Makes it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkmark {
+    font-size: 40px;
+    color: #d4ffd4;
+    /* Light green */
+    font-weight: bold;
+}
+
+.align {
+    width: 100%;
+    height: 100%;
+    /*background-color: black;*/
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
