@@ -17,16 +17,16 @@ body::-webkit-scrollbar {
 }
 
 .header-team {
-    height: 597px;
+    height: 480px;
     width: 100%;
-    background: linear-gradient(to bottom, rgb(142, 141, 143) 0%, rgb(240, 240, 240) 40%, rgb(233, 233, 233) 70%, rgb(142, 141, 143) 100%);
+    background: linear-gradient(to bottom, rgb(142, 141, 143) 0%, rgb(240, 240, 240) 40%, rgb(233, 233, 233) 70%, rgb(212, 212, 212) 100%);
 }
 
 .header {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    height: 154px;
+    height: 10vh;
     width: 100%;
     padding: 0 73px;
 }
@@ -72,10 +72,28 @@ body::-webkit-scrollbar {
 }
 
 .nav-container a {
-    color: rgb(14, 44, 0);
+    color: #0E1317;
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
+}
+
+.nav-container select {
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+    margin-top: -3px;
+    padding: 0;
+    color: #0E1317;
+    text-transform: uppercase;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #profile-img {
@@ -91,7 +109,7 @@ body::-webkit-scrollbar {
     height: 95%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    box-shadow: 0px 0px 5px #355E3B; /* Shadow effect */
+    box-shadow: 0px 0px 5px #355E3B;
     background-color: #355E3B;
 }
 
@@ -110,15 +128,86 @@ body::-webkit-scrollbar {
 }
 
 .carousel-container {
+    display: flex;
+    justify-content: center;
     height: 65%;
     width: 100%;
-    /*background-color: rgb(128, 167, 21);*/
+    overflow: hidden;
+}
+
+.carousel-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: -30px;
+    overflow: hidden;
+}
+
+.carousel {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.carousel-img {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #657855;
+    background-color: blue;
+}
+
+.carousel-img img {
+    height: 105%;
+    aspect-ratio: 1/1;
+    margin-top: 2px;
+}
+
+.carousel-name {
+    text-align: center;
+}
+
+.carousel-name p {
+    padding: 0;
+    font-size: 18px;
+    color: black;
+}
+
+.car-arrow {
+    position: absolute;
+    top: calc(50% - 30px);
+    font-size: 30px;
+}
+
+#car-prev, #car-next {
+    cursor: pointer;
+}
+
+.car-arrow.left {
+    left: 20px;
+}
+
+.car-arrow.right {
+    right: 20px;
 }
 
 .team-title {
     box-sizing: border-box;
     text-align: center;
-    margin-top: 27px;
+    margin: -10px 0 0;
 }
 
 .team-title h5 {
@@ -183,7 +272,7 @@ body::-webkit-scrollbar {
 }
 
 .footer {
-    height: 75px;
+    height: 10vh;
     background-color: #657855;
 }
 
