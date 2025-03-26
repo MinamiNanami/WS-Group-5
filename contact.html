@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="nav-bar">
-            <di class="home"><a href="homepage.html"><img src="images/home.png" alt=""></a></di>
+            <div class="home"><a href="homepage.html"><img src="images/home.png" alt=""></a></div>
             <div class="logo"><img src="images/PHpalleteLogo.png" alt="ph-pallete-logo"></div>
             <a href="team.html">About Us</a>
             <a href="contact.html">Contact Us</a>
@@ -27,23 +27,21 @@
             <div class="home"><a href=""><img src="images/proficon.png"></a></div>
         </nav>
     </header>
-    <div class="main-section">
-        <div class="header-content">
-            <div class="contact-title">
-                <h3> CONTACT </h3>
-            </div>
-            <div class="header-info">
-                <h3>CUSTOMER SERVICE</h3>
-                <p>If you have general questions or concerns about PH Palette, please contact our Customer Contact<br>
-                    Center customerservice.phpalette.com</p>
-                <h3>MEDIA CONTACTS</h3>
-                <p>Please email your detailed inquiry and deadline for response to the following:</p>
-                <br>
-                <br>
-                <p>Phone: 09777770711</p>
-                <p>Email: phpalette@gmail.com</p>
-            </div>
+    <div class="container">
+        <h1 class="title">CONTACT</h1>
 
+        <div class="section">
+            <h2 class="section-title">CUSTOMER SERVICE</h2>
+            <p>If you have general questions or concerns about PH Palette, please contact our Customer</p>
+            <p>Contact Center <a href="mailto:customerservice.phpalette.com"
+                    class="underline">customerservice.phpalette.com</a></p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">MEDIA CONTACTS</h2>
+            <p>Please email your detailed inquiry and deadline for response to the following:</p>
+            <p>Phone: 09777770711</p>
+            <p>Email: <a href="mailto:phpalette@gmail.com" class="underline">phpalette@gmail.com</a></p>
         </div>
     </div>
 
@@ -57,6 +55,6 @@
             window.location.href = url; // Redirects to the selected page (HTML file)
         }
     }
-    </script>
+</script>
 
 </html>

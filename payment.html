@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipino Flag Inspired ear piercing - Palette</title>
+    <link rel="stylesheet" href="paymentStyle.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="home-logo">
+                <a href="homepage.html">
+                    <img src="images/home.png" alt="">
+                </a>
+            </div>
+            <div class="logo">
+                <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
+            </div>
+            <div class="nav-container">
+                <a href="contact.html">Contact Us</a>
+                <a href="team.html">About Us</a>
+                <a href="artist.html">Artist</a>
+                <select id="pageSelect" onchange="navigateToPage()">
+                    <option value="" disabled selected> CATEGORY </option>
+                    <option value="painting.html">Paintings</option>
+                    <option value="sculptures.html">Sculptures</option>
+                    <option value="crafts.html">Crafts</option>
+                </select>
+                <a href="cart.html">Cart</a>
+            </div>
+            <a href="#" id="home">
+                <div id="home-img-border">
+                    <img src="images/proficon.png">
+                </div>
+            </a>
+        </nav>
+    </header>
+
+    <div class="back-button">
+        <a href="cart.html">
+            ←
+        </a>
+    </div>
+    <div class="main-container">
+        <div class="payment-container">
+            <div class="checkout-container">
+                <div class="item-count">1 Total Item</div>
+
+                <div class="item-details">
+                    <div class="item-image"></div>
+                    <div>
+                        <div class="item-name">??????</div>
+                        <div class="item-price">₱??,???.00</div>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <span>Payment Method</span>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-method-options">
+                        <div class="payment-option selected">Cash On Delivery</div>
+                        <div class="payment-option">Master Card</div>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <span>Default Location</span>
+                    <span class="edit">Edit</span>
+                </div>
+
+                <div class="default-location">
+                    <div class="method-selected">123 Brgy. Sta Barbara, Baliwag Bulacan<span class="see-map">See map</span> </div>
+                </div>
+
+                <div class="total-amount">
+                    <span>TOTAL AMOUNT TO PAY</span>
+                    <span>₱ ??,???.00</span>
+                </div>
+
+                <div class="buttons">
+                    <a href="cart.html"><button class="button cancel-button">CANCEL
+                            ORDER</button></a>
+                    <button class="button place-order-button" onclick="showPopup()">PLACE ORDER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Modal -->
+    <div class="map-modal">
+        <div class="map-modal-content">
+            <span class="map-close">&times;</span>
+            <div class="map-placeholder">
+                Google Maps / Location Interface Placeholder
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay Modal -->
+    <div id="popupOverlay" class="overlay">
+        <div class="popup-container">
+            <p>ORDER SUCCESSFUL</p>
+            <div class="align">
+                <div class="checkmark-container">
+                    <span class="checkmark">&#10004;</span> <!-- Unicode checkmark -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        function showPopup() {
+            var popup = document.getElementById("popupOverlay");
+            popup.classList.add("show");
+
+            // Auto-close after 3 seconds
+            setTimeout(closePopup, 1000);
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("popupOverlay");
+            popup.classList.remove("show");
+        }
+
+        // Payment Method Selection
+        document.addEventListener('DOMContentLoaded', () => {
+            const paymentOptions = document.querySelectorAll('.payment-option');
+
+            paymentOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    paymentOptions.forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    option.classList.add('selected');
+                });
+            });
+        });
+
+        // Map Modal Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const mapModal = document.querySelector('.map-modal');
+            const seeMapBtn = document.querySelector('.see-map');
+            const closeMapBtn = document.querySelector('.map-close');
+
+            seeMapBtn.addEventListener('click', () => {
+                mapModal.style.display = 'block';
+            });
+
+            closeMapBtn.addEventListener('click', () => {
+                mapModal.style.display = 'none';
+            });
+
+            // Close modal if clicked outside
+            window.addEventListener('click', (event) => {
+                if (event.target === mapModal) {
+                    mapModal.style.display = 'none';
+                }
+            });
+        });
+
+        function navigateToPage() {
+            var select = document.getElementById("pageSelect");
+            var url = select.value;
+            if (url) {
+                window.location.href = url; // Redirects to the selected page (HTML file)
+            }
+        }
+
+    </script>
+</body>
+
+</html>
