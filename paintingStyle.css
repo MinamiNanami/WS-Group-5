@@ -142,18 +142,21 @@ header {
 }
 
 .main-section {
-    width: 100%;
+    max-width: 1200px;
     /*background-color: blue;*/
     height: flex;
     background-color: #FFFAEA;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .gallery {
-    display: flex;
+    display: grid;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     margin-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 /* Section Header */
@@ -184,7 +187,7 @@ header {
 }
 
 .art-item {
-    display: flex;
+    display: block;
     flex-direction: column; /* Stack image and title */
     align-items: center;
     justify-content: center;
@@ -199,10 +202,15 @@ header {
     margin-bottom: 20px;
 }
 
+.art-item.hidden{
+    display: none !important;
+}
+
 .art-item img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .art-title {
@@ -227,3 +235,4 @@ header {
     font-size: 20px;
     cursor: pointer;
 }
+

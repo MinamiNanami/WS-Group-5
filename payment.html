@@ -50,7 +50,7 @@
                 <div class="item-count">1 Total Item</div>
 
                 <div class="item-details">
-                    <div class="item-image"></div>
+                    <div class="item-image"><img src="#" alt=" "></div>
                     <div>
                         <div class="item-name">??????</div>
                         <div class="item-price">₱??,???.00</div>
@@ -69,12 +69,13 @@
                 </div>
 
                 <div class="section-header">
-                    <span>Default Location</span>
-                    <span class="edit">Edit</span>
+                    <span>Location</span>
+                    <span class="edit address-edit">Edit</span>
                 </div>
 
                 <div class="default-location">
-                    <div class="method-selected">123 Brgy. Sta Barbara, Baliwag Bulacan<span class="see-map">See map</span> </div>
+                    <span class="address-text">123 Brgy. Sta Barbara, Baliwag Bulacan</span>
+                    <span class="see-map">See map</span>
                 </div>
 
                 <div class="total-amount">
@@ -83,9 +84,8 @@
                 </div>
 
                 <div class="buttons">
-                    <a href="cart.html"><button class="button cancel-button">CANCEL
-                            ORDER</button></a>
-                    <button class="button place-order-button" onclick="showPopup()">PLACE ORDER</button>
+                    <button class="button cancel-button" onclick="location.href='cart.html'">CANCEL ORDER</button>
+                    <button class="button place-order-button" onclick="showPopup()">PLACE ORDER &nbsp;</button>
                 </div>
             </div>
         </div>
@@ -109,6 +109,18 @@
                 <div class="checkmark-container">
                     <span class="checkmark">&#10004;</span> <!-- Unicode checkmark -->
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Address Edit Modal -->
+    <div class="address-modal">
+        <div class="address-modal-content">
+            <h2>Edit Address</h2>
+            <textarea id="address-details" placeholder="Street Address, Barangay, City, Province"></textarea>
+            <div class="modal-buttons">
+                <button class="modal-cancel">Cancel</button>
+                <button class="modal-save">Save</button>
             </div>
         </div>
     </div>
@@ -172,6 +184,56 @@
                 window.location.href = url; // Redirects to the selected page (HTML file)
             }
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Payment Method Selection
+            const paymentOptions = document.querySelectorAll('.payment-option');
+            paymentOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    paymentOptions.forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    option.classList.add('selected');
+                });
+            });
+
+            // Address Edit Modal
+            const addressModal = document.querySelector('.address-modal');
+            const addressEditBtn = document.querySelector('.address-edit');
+            const modalCancelBtn = document.querySelector('.modal-cancel');
+            const modalSaveBtn = document.querySelector('.modal-save');
+            const addressText = document.querySelector('.address-text');
+
+            // Open modal
+            addressEditBtn.addEventListener('click', () => {
+                addressModal.style.display = 'block';
+
+                // Populate existing address
+                const currentAddress = addressText.textContent.split(', ');
+                document.getElementById('address-details').value = currentAddress.join(', ');
+            });
+
+            // Close modal without saving
+            modalCancelBtn.addEventListener('click', () => {
+                addressModal.style.display = 'none';
+            });
+
+            // Save new address
+            modalSaveBtn.addEventListener('click', () => {
+                const details = document.getElementById('address-details').value;
+
+                // Update address text (you might want to format this more elegantly)
+                addressText.textContent = details;
+                addressModal.style.display = 'none';
+            });
+
+            // Close modal if clicked outside
+            window.addEventListener('click', (event) => {
+                if (event.target === addressModal) {
+                    addressModal.style.display = 'none';
+                }
+            });
+        });
 
     </script>
 </body>

@@ -89,7 +89,8 @@ header {
     margin-right: -12px;
     overflow: hidden;
     border-radius: 50%;
-    box-shadow: 0px 0px 5px #355E3B; /* Shadow effect */
+    box-shadow: 0px 0px 5px #355E3B;
+    /* Shadow effect */
     background-color: #355E3B;
 }
 
@@ -129,7 +130,7 @@ header {
 .checkout-container {
     background-color: #e4dfd127;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     padding: 25px;
 }
 
@@ -143,7 +144,7 @@ header {
 .item-details {
     display: flex;
     align-items: center;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #2c522e5d;
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 20px;
@@ -245,7 +246,7 @@ header {
 
 .place-order-button {
     background-color: #FFFAEA;
-    border: #2C522E solid 3px; 
+    border: #2C522E solid 3px;
     color: #2D3629;
 }
 
@@ -259,7 +260,7 @@ header {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .map-modal-content {
@@ -302,14 +303,18 @@ header {
     cursor: pointer;
 }
 
-.method-selected {
+/*.method-selected {
     background-color: #456a3e;
     color: white;
     padding: 10px;
     border-radius: 8px;
     flex-grow: 1;
     border: 1px solid #2D3629;
-}
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
 
 
 /* Overlay background */
@@ -377,4 +382,74 @@ header {
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+
+/* Address Edit Modal */
+.address-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.address-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.address-modal-content input,
+.address-modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-cancel {
+    background-color: #721821;
+    color: white;
+}
+
+.modal-save {
+    background-color: #456a3e;
+    color: white;
+}
+
+.default-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #456a3e;
+    color: #FFFAEA;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.section-header .edit {
+    text-decoration: none;
 }
