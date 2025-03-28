@@ -43,9 +43,13 @@ header {
 }
 
 .logo img {
-    height: 100%;
+    height: 90%;
     margin-left: -25px;
-    margin-top: -4px;
+    margin-top: 1px;
+}
+
+.home-logo {
+    z-index: 1000;
 }
 
 .home-logo img {

@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@ body {
     padding: 0;
 }
 
-/* Header Styles */
 header {
     display: flex;
     flex-direction: column;
@@ -25,34 +23,52 @@ header {
     padding-top: 20px;
 }
 
-/* Navbar */
 .navbar {
     position: absolute;
-    top: 10px;
-    width: 90%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
+    height: 10%;
+    width: 100%;
+    top: 0%;
+    padding: 0 73px 0 71px;
 }
 
 .nav-left {
-    margin-left: 100px;
+    text-transform: uppercase;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
+}
+
+.nav-bar select {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    cursor: pointer;
+}
+
+#pageSelect {
+    margin-top: -3px;   
+    color: #0e1317e0;
+    letter-spacing: 1px;
+}
+
+select option {
+    color: #0e1317e0;
 }
 
 .nav-left a {
     text-decoration: none;
-    color: black;
+    color: #0e1317e0;
     font-weight: bold;
     font-size: 20px;
 }
 
 .nav-left img {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     margin-right: 10px;
 }
 
