@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="userprofileStyle.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #FFFAEA;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    header {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        height: 10vh;
+        width: 100%;
+        padding-top: 0px;
+    }
+
+    .nav-bar {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 10%;
+        width: 100%;
+        top: 0%;
+        padding: 0 73px 0 71px;
+        border-bottom: 5px solid #365f42;
+    }
+
+    .logo {
+        height: 100%;
+        margin-right: auto;
+    }
+
+    .logo img {
+        height: 90%;
+        margin-left: -25px;
+        margin-top: 1px;
+    }
+
+    .home-logo {
+        z-index: 1000;
+    }
+
+    .home-logo img {
+        width: 45px;
+        height: 45px;
+        margin-bottom: -6px;
+    }
+
+    .nav-container {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 58.6%;
+    }
+
+    .nav-bar select {
+        border: none;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: none;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .nav-bar a {
+        text-decoration: none;
+        color: #0E1317;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    #home {
+        justify-items: center;
+        align-content: center;
+        height: 100%;
+        aspect-ratio: 1/1;
+        margin: 0 -3px -3px 47px;
+    }
+
+    #home-img-border {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 70%;
+        aspect-ratio: 1/1;
+        margin-right: -12px;
+        overflow: hidden;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px #355E3B;
+        /* Shadow effect */
+        background-color: #355E3B;
+    }
+
+    #home img {
+        position: absolute;
+        left: -1px;
+        top: 2px;
+        height: 104%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+    }
+
+    .container {
+        background-image: url('images/userBG.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        padding: 60px;
+        height: calc(100vh - 10vh);
+    }
+
+    .profile-info {
+        z-index: 2;
+    }
+
+    .year {
+        position: absolute;
+        top: 60px;
+        right: 60px;
+        font-size: 35px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .artist-name {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .divider {
+        width: 100%;
+        max-width: 380px;
+        height: 2px;
+        background-color: #333;
+        margin-bottom: 15px;
+    }
+
+    .gender-occupation {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .contact-info {
+        margin-top: 100px;
+        color: black;
+    }
+
+    .contact-info p {
+        margin-bottom: 5px;
+        font-size: 25px;
+    }
+
+    .change-profile {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid #ccc;
+        padding: 8px 16px;
+        border-radius: 4px;
+        color: #333;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .texture-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/userBG.png');
+        background-size: cover;
+        opacity: 0.8;
+        mix-blend-mode: multiply;
+    }
+
+    .gender-occupation span {
+        font-weight: bold;
+        color: black;
+        font-size: 25px;
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-header {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .year-select {
+        display: inline-block;
+        position: relative;
+    }
+
+    .year-select select {
+        padding: 10px;
+        width: 100px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .year-select:after {
+        content: '▼';
+        font-size: 12px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-primary {
+        background-color: #355E3B;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #2a4a2f;
+    }
+
+    .btn-secondary {
+        background-color: #f1f1f1;
+        color: #333;
+    }
+
+    .btn-secondary:hover {
+        background-color: #e0e0e0;
+    }
+
+    .btn-outline {
+        background-color: transparent;
+        border: 1px solid #355E3B;
+        color: #355E3B;
+    }
+
+    .btn-outline:hover {
+        background-color: #f0f7f1;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="home-logo">
+                <a href="homepage.html">
+                    <img src="images/home.png" alt="">
+                </a>
+            </div>
+            <div class="logo">
+                <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
+            </div>
+            <div class="nav-container">
+                <a href="contact.html">Contact Us</a>
+                <a href="team.html">About Us</a>
+                <a href="artist.html">Artist</a>
+                <select id="pageSelect" onchange="navigateToPage()">
+                    <option value="" disabled selected> CATEGORY </option>
+                    <option value="painting.html">Paintings</option>
+                    <option value="sculptures.html">Sculptures</option>
+                    <option value="crafts.html">Crafts</option>
+                </select>
+                <a href="cart.html">Cart</a>
+            </div>
+            <a href="cart.html" id="home">
+                <div id="home-img-border">
+                    <img src="images/proficon.png">
+                </div>
+            </a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="texture-overlay"></div>
+
+        <div class="profile-info">
+            <h1 class="artist-name" id="displayName">Juan Dela Cruz</h1>
+            <div class="divider"></div>
+
+            <div class="gender-occupation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <line x1="12" y1="21" x2="12" y2="15"></line>
+                </svg>
+                <span>|</span>
+                <span>PAINTER</span>
+            </div>
+
+            <div class="contact-info">
+                <p id="displayEmail">juandelacruz@gmail.com</p>
+                <p id="displayAddress">Baliwag City, Bulacan</p>
+                <br>
+                <p id="displayBio">*insert Bio</p>
+            </div>
+        </div>
+
+        <div class="year" id="displayYear">2025</div>
+
+        <button class="change-profile" id="changeProfileBtn">Change Profile</button>
+    </div>
+
+    <!-- Profile Edit Modal -->
+    <div class="modal-overlay" id="profileModal">
+        <div class="modal-container">
+            <div class="modal-header">PROFILE INFORMATION</div>
+            <div class="form-group">
+                <input type="text" id="nameInput" placeholder="Change name" value="Juan Dela Cruz">
+            </div>
+            <div class="form-group">
+                <input type="email" id="emailInput" placeholder="Email" value="juandelacruz@gmail.com">
+            </div>
+            <div class="form-group">
+                <textarea id="bioInput" placeholder="Bio" rows="3">*insert Bio</textarea>
+            </div>
+            <div class="form-group">
+                <input type="text" id="addressInput" placeholder="Address" value="Baliwag City, Bulacan">
+            </div>
+            <div class="form-group">
+                <div class="year-select">
+                    <select id="yearInput">
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025" selected>2025</option>
+                    </select>
+                </div>
+            </div>
+            <div class="button-group">
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                    <button class="btn btn-primary" id="saveBtn">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function navigateToPage() {
+        var select = document.getElementById("pageSelect");
+        var url = select.value;
+        if (url) {
+            window.location.href = url; // Redirects to the selected page (HTML file)
+        }
+    }
+
+    // Profile Modal Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const changeProfileBtn = document.getElementById('changeProfileBtn');
+        const profileModal = document.getElementById('profileModal');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        const changeProfilePicBtn = document.getElementById('changeProfilePicBtn');
+
+        // Elements to update
+        const displayName = document.getElementById('displayName');
+        const displayEmail = document.getElementById('displayEmail');
+        const displayBio = document.getElementById('displayBio');
+        const displayAddress = document.getElementById('displayAddress');
+        const displayYear = document.getElementById('displayYear');
+
+        // Form inputs
+        const nameInput = document.getElementById('nameInput');
+        const emailInput = document.getElementById('emailInput');
+        const bioInput = document.getElementById('bioInput');
+        const addressInput = document.getElementById('addressInput');
+        const yearInput = document.getElementById('yearInput');
+
+        // Open modal
+        changeProfileBtn.addEventListener('click', function() {
+            // Set current values in form
+            nameInput.value = displayName.textContent;
+            emailInput.value = displayEmail.textContent;
+            bioInput.value = displayBio.textContent;
+            addressInput.value = displayAddress.textContent;
+            yearInput.value = displayYear.textContent;
+            
+            // Show modal
+            profileModal.style.display = 'flex';
+        });
+
+        // Close modal
+        cancelBtn.addEventListener('click', function() {
+            profileModal.style.display = 'none';
+        });
+
+        // Save changes
+        saveBtn.addEventListener('click', function() {
+            // Update displayed information
+            displayName.textContent = nameInput.value;
+            displayEmail.textContent = emailInput.value;
+            displayBio.textContent = bioInput.value;
+            displayAddress.textContent = addressInput.value;
+            displayYear.textContent = yearInput.value;
+            
+            // Close modal
+            profileModal.style.display = 'none';
+            
+        });
+
+        // Change profile picture (placeholder functionality)
+        changeProfilePicBtn.addEventListener('click', function() {
+            alert('Profile picture change functionality would be implemented here!');
+            // In a real implementation, this would open a file picker
+        });
+
+        // Close modal if clicking outside
+        profileModal.addEventListener('click', function(event) {
+            if (event.target === profileModal) {
+                profileModal.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</html>
