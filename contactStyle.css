@@ -114,25 +114,49 @@ header {
 }
 
 .container {
-    margin-top: 120px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 5vw;
 }
 .title {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
+    color: rgba(0, 0, 0, 0.80);
 }
+
+.main-section {
+    flex-grow: 1;
+}
+
 .section {
+    text-align: center;
     margin-bottom: 4rem;
 }
 .section-title {
-    font-size: 1.125rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 .section p {
     margin-bottom: 0.5rem;
+    font-size: 1.25rem;
 }
-.underline {
-    text-decoration: underline;
+
+p a {
+    color: black;
+}
+
+.section.two p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.section.two p:nth-child(3), .section.two p:nth-child(4) {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.section.two .underline {
+    text-decoration: none;
 }
