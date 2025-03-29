@@ -172,11 +172,11 @@ header {
     padding: 10px 20px;
     width: 400px; /* Keeps the box only as wide as the text */
     border-radius: 5px;
-    margin-left: 400px; /* Aligns to the left */
     margin-top: 10px;
     margin-bottom: 10px;
     position: relative;
     text-align: center;
+    justify-content: flex-start;
 }
 
 /* Left Strip Effect */
