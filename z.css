@@ -276,6 +276,179 @@ nav {
     align-items: center;
 }
 
+/* Section Header */
+.gallery-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: normal;
+    height: 8vh;
+    color: #5a5a5a; /* Dark gray text */
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px 20px;
+    width: 450px; /* Keeps the box only as wide as the text */
+    border-radius: 5px;
+    margin-top: 70px;
+    background-color: #d9d2b6; /* Beige background */
+}
+
+/* Left Strip Effect */
+.gellery-title::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    background-color: #5a5a5a; /* Dark side strip */
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin-top: 10px;
+    padding: 20px;
+    /*background-color: #000 ;*/
+    box-shadow: 0px 1px 2px rgba(0, 0, 0);
+    width: 60%;
+    margin-left: 400px;
+    margin-bottom: 10px;
+}
+
+/* Individual Art Item */
+.art-item {
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s;
+    flex-wrap: wrap;
+}
+
+.art-item img {
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+/* Highlighted Featured Image */
+.featured {
+    height: 200px;
+    aspect-ratio: 1/1;
+    padding: 5px;
+    border: 3px solid #b59f6a;
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+.footer-div {
+    background-color: #657855;
+    width: 100%;
+    height: 10%;
+}
+
+.nav-left select {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*
+.options {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.options h2 {
+    font-size: 35px;
+    margin-bottom: 50px;
+    margin-right: 800px;
+
+}
+
+.options-container {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.circular-frame {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid #6b7c5a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.wall-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0dd;
+}
+
+.painting {
+    position: absolute;
+    width: 80%;
+    height: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 15px solid #d8cc9f;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #f5f4ea;
+    overflow: hidden;
+}
+
+.painting img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .gallery-title {
     position: relative;
     display: flex;
@@ -320,43 +493,38 @@ nav {
 .art-item {
     height: 150px;
     aspect-ratio: 1/1;
+    background: white;
     border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     transition: transform 0.3s;
     flex-wrap: wrap;
+    background-color: darkblue;
 }
 
 .art-item img {
     height: 100%;
     aspect-ratio: 1/1;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .featured {
-    height: 250px;
-    width: fit-content;
-    padding: 5px;
-    /* border: 3px solid #b59f6a; */
-    position: relative;
-}
-
-.art-item.featured img {
     height: 200px;
-    width: 200px;
+    aspect-ratio: 1/1;
+    padding: 5px;
+    border: 3px solid #b59f6a;
+    position: relative;
 }
 
 .caption {
     position: absolute;
-    bottom: -2px;
-    left: 50%;
+    bottom: 10px;
     transform: translateX(-50%);
     font-weight: bold;
     font-size: 16px;
-    color: black;
-    width: 100%;
+    color: white;
 }
 
 .footer-div {
@@ -375,3 +543,4 @@ nav {
     cursor: pointer;
     font-size: 20px;
 }
+*/

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
@@ -88,6 +89,7 @@ body::-webkit-scrollbar {
     margin-top: -3px;
     padding: 0;
     color: #0E1317;
+    font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     border: none;
     appearance: none;
