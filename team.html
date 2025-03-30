@@ -11,140 +11,197 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="team.js"></script>
 </head>
 <body>
-    <div class="main-container">
-        <div class="header-team">
-            <div class="header">
-                <div class="header-container">
-                    <a href="homepage.html" id="home-img">
-                        <img src="images/home.png">
-                    </a>
-                    <div id="ph-pallete-img">
-                        <img src="images/PHpalleteLogo.png">
+    <style>
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75%;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .carousel-content {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel {
+            transform: scale(1.5);
+            transform-origin: center;
+        }
+    </style>
+    <header>
+        <div class="nav-bar">
+            <div class="home-logo">
+                <a href="homepage.html">
+                    <img src="images/home.png" alt="">
+                </a>
+            </div>
+            <div class="logo">
+                <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
+            </div>
+            <div class="nav-container">
+                <a href="contact.html">Contact Us</a>
+                <a href="team.html">About Us</a>
+                <a href="artist.html">Artist</a>
+                <select class="browser-default" onchange="navigateToPage(this)">
+                    <option value="" disabled selected> CATEGORY </option>
+                    <option value="painting.html">Paintings</option>
+                    <option value="sculptures.html">Sculptures</option>
+                    <option value="crafts.html">Crafts</option>
+                </select>
+                <a href="cart.html">Cart</a>
+            </div>
+            <a href="userprofile.html" id="home">
+                <div id="home-img-border">
+                    <img src="images/proficon.png">
+                </div>
+            </a>
+        </div>
+        <div class="team">
+            <div class="carousel-container">
+                <div class="carousel-content">
+                    <div class="carousel">
+                        <a class="carousel-item" href="mem-fritzie.html">
+                            <div class="carousel-img">
+                                <img src="images/formal/fritzie.png" style="margin: -5px 0 0 -5px;" alt="image">
+                            </div>
+                            <div class="carousel-name">
+                                <p>PROJECT MANAGER</p>
+                            </div>
+                        </a>
+                        <a class="carousel-item" href="mem-rosie.html" >
+                            <div class="carousel-img">
+                                <img src="images/formal/rose.png" style="margin: -4px 0 0 -3px;" alt="image">
+                            </div>
+                            <div class="carousel-name">
+                                <p>ASSIST. UI/UX DESIGNER</p>
+                            </div>
+                        </a>
+                        <a class="carousel-item" href="mem-nics.html">
+                            <div class="carousel-img">
+                                <img src="images/formal/nics.png" style="margin: -2px -2px 0 0;" alt="image">
+                            </div>
+                            <div class="carousel-name">
+                                <p>ASSIST. PROGRAMMER</p>
+                            </div>
+                        </a>
+                        <a class="carousel-item" href="mem-krisking.html">
+                            <div class="carousel-img">
+                                <img src="images/formal/krisking.png" style="margin: -2px 0 0 0;" alt="image">
+                            </div>
+                            <div class="carousel-name">
+                                <p>ASSIST. RESEARCHER</p>
+                            </div>
+                        </a>
+                        <a class="carousel-item" href="mem-johnrick.html">
+                            <div class="carousel-img">
+                                <img src="images/formal/johnrick.png" style="margin: -5px 0 0 0;" alt="image">
+                            </div>
+                            <div class="carousel-name">
+                                <p>RESEARCHER</p>
+                            </div>
+                        </a>
+                        <a class="carousel-item" href="mem-wilson.html">
+                            <div class="carousel-img">
+                                <img src="images/formal/wilson.png" style="margin: -7px 0 0 -3px;" alt="image">
+                            </div>
+                            <div class="carousel-name">
+                                <p>PROGRAMMER</p>
+                            </div>
+                        </a>
+                        <a class="carousel-item" href="mem-jhelina.html">
+                            <div class="carousel-img">
+                                <img src="images/formal/jhelina.png" style="margin: 0 0 -3px 0;" alt="image">
+                            </div>
+                            <div class="carousel-name">
+                                <p>UI/UX DESIGNER</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="nav-container">
-                        <a href="contact.html">
-                            CONTACT US
-                        </a>
-                        <a href="team.html">
-                            ABOUT US
-                        </a>
-                        <a href="artist.html">
-                            ARTIST
-                        </a>
-                        <select class="browser-default" onchange="navigateToPage(this)">
-                            <option value="" disabled selected> CATEGORY </option>
-                            <option value="painting.html">Paintings</option>
-                            <option value="sculptures.html">Sculptures</option>
-                            <option value="crafts.html">Crafts</option>
-                        </select>
-                        <a href="cart.html">
-                            CART
-                        </a>
-                    </div>
-                    <a href="userprofile.html" id="profile-img">
-                        <div id="profile-img-border">
-                            <img src="images/proficon.png">
-                        </div>
-                    </a>
+                    <div class="car-arrow left" id="car-prev"><ion-icon name="chevron-back-sharp"></ion-icon></div>
+                    <div class="car-arrow right" id="car-next"><ion-icon name="chevron-forward-sharp"></ion-icon></div>
                 </div>
             </div>
-            <div class="team">
-                <div class="carousel-container">
-                    <div class="carousel-content">
-                        <div class="carousel">
-                            <a class="carousel-item" href="mem-fritzie.html">
-                                <div class="carousel-img">
-                                    <img src="images/formal/fritzie.png" style="margin: -5px 0 0 -5px;" alt="image">
-                                </div>
-                                <div class="carousel-name">
-                                    <p>PROJECT MANAGER</p>
-                                </div>
-                            </a>
-                            <a class="carousel-item" href="mem-rosie.html" >
-                                <div class="carousel-img">
-                                    <img src="images/formal/rose.png" style="margin: -4px 0 0 -3px;" alt="image">
-                                </div>
-                                <div class="carousel-name">
-                                    <p>ASSIST. UI/UX DESIGNER</p>
-                                </div>
-                            </a>
-                            <a class="carousel-item" href="mem-nics.html">
-                                <div class="carousel-img">
-                                    <img src="images/formal/nics.png" style="margin: -2px -2px 0 0;" alt="image">
-                                </div>
-                                <div class="carousel-name">
-                                    <p>ASSIST. PROGRAMMER</p>
-                                </div>
-                            </a>
-                            <a class="carousel-item" href="mem-krisking.html">
-                                <div class="carousel-img">
-                                    <img src="images/formal/krisking.png" style="margin: -2px 0 0 0;" alt="image">
-                                </div>
-                                <div class="carousel-name">
-                                    <p>ASSIST. RESEARCHER</p>
-                                </div>
-                            </a>
-                            <a class="carousel-item" href="mem-johnrick.html">
-                                <div class="carousel-img">
-                                    <img src="images/formal/johnrick.png" style="margin: -5px 0 0 0;" alt="image">
-                                </div>
-                                <div class="carousel-name">
-                                    <p>RESEARCHER</p>
-                                </div>
-                            </a>
-                            <a class="carousel-item" href="mem-wilson.html">
-                                <div class="carousel-img">
-                                    <img src="images/formal/wilson.png" style="margin: -7px 0 0 -3px;" alt="image">
-                                </div>
-                                <div class="carousel-name">
-                                    <p>PROGRAMMER</p>
-                                </div>
-                            </a>
-                            <a class="carousel-item" href="mem-jhelina.html">
-                                <div class="carousel-img">
-                                    <img src="images/formal/jhelina.png" style="margin: 0 0 -3px 0;" alt="image">
-                                </div>
-                                <div class="carousel-name">
-                                    <p>UI/UX DESIGNER</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="car-arrow left" id="car-prev"><ion-icon name="chevron-back-sharp"></ion-icon></div>
-                        <div class="car-arrow right" id="car-next"><ion-icon name="chevron-forward-sharp"></ion-icon></div>
-                    </div>
-                </div>
-                <div class="team-title">
-                    <h5>
-                        OUR TEAM
-                    </h5>
-                </div>
+            <div class="team-title">
+                <h5>
+                    OUR TEAM
+                </h5>
             </div>
         </div>
-        <div class="mission-vission">
-            <div class="php-container">
-                <img src="images/PHpalleteLogo.png">
-            </div>
-            <h3>
-                MISSION
-            </h3>
-            <p>
-                To empower artist by providing a vibrant<br>online marketplace that connects their<br>creativity with the world.
-            </p>
-            <div class="line"></div>
-            <h3>
-                VISSION
-            </h3>
-            <p>
-                To be the leading platform where art thrives,<br>artists succeed, and collectors find<br>inspration.
-            </p>
+    </header>
+    <!-- </header> -->
+    <div class="mission-vission">
+        <div class="php-container">
+            <img src="images/PHpalleteLogo.png">
         </div>
-        <div class="footer">
-        
-        </div>
+        <h3>
+            MISSION
+        </h3>
+        <p>
+            To empower artist by providing a vibrant<br>online marketplace that connects their<br>creativity with the world.
+        </p>
+        <div class="line"></div>
+        <h3>
+            VISSION
+        </h3>
+        <p>
+            To be the leading platform where art thrives,<br>artists succeed, and collectors find<br>inspration.
+        </p>
     </div>
+    <div class="footer">
+    
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                dist: -60,
+                shift: -50,
+                padding: 200,
+                numVisible: 7
+            });
+
+            const prev = document.getElementById('car-prev');
+            const next = document.getElementById('car-next');
+            const instance = M.Carousel.getInstance(elems[0]);
+
+            function setOpacityTo100() {
+                const items = elems[0].querySelectorAll('.carousel-item');
+                items.forEach(item => {
+                    item.style.transition = 'opacity 0.3s ease'; // Add smooth transition
+                    item.style.opacity = '1'; // Set opacity to 100%
+                });
+            }
+            
+            prev.addEventListener('click', () => {
+                instance.prev();
+                setTimeout(setOpacityTo100, 1400); // Slight delay to allow carousel DOM update
+            });
+
+            next.addEventListener('click', () => {
+                instance.next();
+                setTimeout(setOpacityTo100, 1400);
+            });
+
+            setOpacityTo100();
+        });
+
+        function navigateToPage(selectElement) {
+            const selectedValue = selectElement.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+    </script>
 </body>
 
 </html>
