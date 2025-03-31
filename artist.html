@@ -8,41 +8,43 @@
 </head>
 <body>
     <div class="main-container">
-        <div class="header">
-            <div class="home-logo">
-                <a href="homepage.html">
-                    <img src="images/home.png" alt="">
+        <div class="section-one">
+            <div class="header">
+                <div class="home-logo">
+                    <a href="homepage.html">
+                        <img src="images/home.png" alt="">
+                    </a>
+                </div>
+                <div class="logo">
+                    <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
+                </div>
+                <div class="nav-container">
+                    <a href="contact.html">CONTACT US</a>
+                    <a href="about-us.html">ABOUT US</a>
+                    <a href="artist.html">ARTIST</a>
+                    <select id="pageSelect" onchange="navigateToPage()">
+                        <option value="" disabled selected> CATEGORY </option>
+                        <option value="painting.html">Paintings</option>
+                        <option value="sculptures.html">Sculptures</option>
+                        <option value="crafts.html">Crafts</option>
+                    </select>           
+                    <a href="cart.html">CART</a>
+                </div>
+                <a href="#" id="home">
+                    <div id="home-img-border">
+                        <img src="images/proficon.png">
+                    </div>
                 </a>
             </div>
-            <div class="logo">
-                <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
-            </div>
-            <div class="nav-container">
-                <a href="contact.html">CONTACT US</a>
-                <a href="team.html">ABOUT US</a>
-                <a href="artist.html">ARTIST</a>
-                <select id="pageSelect" onchange="navigateToPage()">
-                    <option value="" disabled selected> CATEGORY </option>
-                    <option value="painting.html">Paintings</option>
-                    <option value="sculptures.html">Sculptures</option>
-                    <option value="crafts.html">Crafts</option>
-                </select>           
-                <a href="cart.html">CART</a>
-            </div>
-            <a href="userprofile.html" id="home">
-                <div id="home-img-border">
-                    <img src="images/proficon.png">
+            <div class="header-content">
+                <h2>Recognizing the artworks of local artists celebrates their creativity, preserves <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;our
+                    culture, and inspires our community</h2>
+        
+                <div class="logo-container">
+                    <img src="images/PHpalleteLogo.png" alt="Palette Logo" class="logo">
+                    <p>Art Gallery and Marketplace for Showcasing Filipino Artistry</p>
                 </div>
-            </a>
-        </div>
-        <div class="header-content">
-            <h2>Recognizing the artworks of local artists celebrates their creativity, preserves <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;our
-                culture, and inspires our community</h2>
-    
-            <div class="logo-container">
-                <img src="images/PHpalleteLogo.png" alt="Palette Logo" class="logo">
-                <p>Art Gallery and Marketplace for Showcasing Filipino Artistry</p>
             </div>
         </div>
         <div class="gallery-title">
@@ -113,5 +115,14 @@
         <div class="footer-div">
         </div>
     </div>
+    <script>
+        function navigateToPage() {
+            var select = document.getElementById("pageSelect");
+            var url = select.value;
+            if (url) {
+                window.location.href = url; // Redirects to the selected page (HTML file)
+            }
+        }
+    </script>
 </body>
 </html>

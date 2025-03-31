@@ -6,11 +6,11 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFAEA;
 }
 
 .main-container {
     width: 100vw;
-    background-color: #FFFAEA;
 }
 
 body::-webkit-scrollbar {

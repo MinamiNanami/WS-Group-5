@@ -1,184 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painting page</title>
+    <title>PH Pallete</title>
     <link rel="stylesheet" href="paintingStyle.css">
-    <!--<style>
-        .main-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            justify-content: center;
-        }
-        .art-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            border: 1px solid #ddd;
-            padding: 10px;
-            max-width: 300px;
-        }
-        .art-item img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-        }
-        .art-item.hidden {
-            display: none !important;
-        }
-    </style>-->
 </head>
-
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="home-logo">
-                <a href="homepage.html">
-                    <img src="images/home.png" alt="">
+    <div class="main-container">
+        <div class="section-one">
+            <div class="header">
+                <div class="home-logo">
+                    <a href="homepage.html">
+                        <img src="images/home.png" alt="">
+                    </a>
+                </div>
+                <div class="logo">
+                    <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
+                </div>
+                <div class="nav-container">
+                    <a href="contact.html">CONTACT US</a>
+                    <a href="team.html">ABOUT US</a>
+                    <a href="artist.html">ARTIST</a>
+                    <select id="pageSelect" onchange="navigateToPage()">
+                        <option value="" disabled selected> CATEGORY </option>
+                        <option value="painting.html">Paintings</option>
+                        <option value="sculptures.html">Sculptures</option>
+                        <option value="crafts.html">Crafts</option>
+                    </select>           
+                    <a href="cart.html">CART</a>
+                </div>
+                <a href="userprofile.html" id="home">
+                    <div id="home-img-border">
+                        <img src="images/proficon.png">
+                    </div>
                 </a>
             </div>
-            <div class="logo">
-                <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
-            </div>
-            <div class="nav-container">
-                <a href="contact.html">Contact Us</a>
-                <a href="team.html">About Us</a>
-                <a href="artist.html">Artist</a>
-                <select id="pageSelect" onchange="navigateToPage()">
-                    <option value="" disabled selected> CATEGORY </option>
-                    <option value="painting.html">Paintings</option>
-                    <option value="sculptures.html">Sculptures</option>
-                    <option value="crafts.html">Crafts</option>
-                </select>
-                <a href="cart.html">Cart</a>
-            </div>
-            <a href="userprofile.html" id="home">
-                <div id="home-img-border">
-                    <img src="images/proficon.png">
+            <div class="header-content">
+                <h2>UNLEASHED YOUR CREATIVITY WITH HANDCRAFTED ARTS —<br>
+                    ADD A TOUCH OF ELEGANCE TO YOUR SPACE</h2>
+                <input type="text" class="search-bar" placeholder="Search..." id="searchInput">
+    
+                <div class="logo-container">
+                    <img src="images/PHpalleteLogo.png" alt="Palette Logo" class="logo">
+                    <p>Art Gallery and Marketplace for Showcasing Filipino Artistry</p>
                 </div>
-            </a>
-        </nav>
-        <div class="header-content">
-            <h2>A FEAST FOR THE EYES - EXPLORE STUNNING ARTWORKS<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THAT
-                CAPTIVATE AND INSPIRE.</h2>
-            <input type="text" class="search-bar" placeholder="Search..." id="searchInput">
-
-            <div class="logo-container">
-                <img src="images/PHpalleteLogo.png" alt="Palette Logo" class="logo">
-                <p>Art Gallery and Marketplace for Showcasing Filipino Artistry</p>
             </div>
         </div>
-    </header>
-    <div class="main-section">
-        <div class="gallery-title">
-            <h3>Crafts </h3>
+        <div class="main-section">
+            <div class="gallery-title">
+                <h3>Crafts </h3>
+            </div>
+            <div class="gallery">
+                <div class="art-item" data-name="Filipino Flag Earring">
+                    <br>
+                    <a href="craftwork1.html"><img src="images/phearring.png" alt="Art 1"></a>
+                    <p class="art-title">"Filipino Flag Earring"</p>
+                    <p class="art-title">₱800.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Pine Needle Basket">
+                    <br>
+                    <a href="craftwork2.html"><img src="images/pinebasket.png" alt="Art 2"></a>
+                    <p class="art-title">"Pine Needle Basket"</p>
+                    <p class="art-title">₱300.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Embroidered Hand Fan">
+                    <br>
+                    <a href="craftwork3.html"><img src="images/handfan.png" alt="Art 3"></a>
+                    <p class="art-title">"Embroidered Hand Fan"</p>
+                    <p class="art-title">₱120.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Sheep Wool Shawl ">
+                    <br>
+                    <a href="craftwork4.html"><img src="images/shawl.png" alt="Art 4"></a>
+                    <p class="art-title">"Sheep Wool Shawl"</p>
+                    <p class="art-title">₱499.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="PH Metal Badge">
+                    <br>
+                    <a href="craftwork5.html"><img src="images/metalbadge.png" alt="Art 5"></a>
+                    <p class="art-title">"PH Metal Badge"</p>
+                    <p class="art-title">₱400.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Lace Parol">
+                    <br>
+                    <a href="craftwork6.html"><img src="images/parol.png" alt="Art 6"></a>
+                    <p class="art-title">"Lace Parol"</p>
+                    <p class="art-title">₱230.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Wall Decoration">
+                    <br>
+                    <a href="craftwork7.html"><img src="images/walldecor.png" alt="Art 7"></a>
+                    <p class="art-title">"Wall Decoration"</p>
+                    <p class="art-title">₱250.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Woven Wonders">
+                    <br>
+                    <a href="craftwork8.html"><img src="images/wovenwonders.png" alt="Art 8"></a>
+                    <p class="art-title">"Woven Wonders"</p>
+                    <p class="art-title">₱300.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Fan Bouquet Bridesmaid">
+                    <br>
+                    <a href="craftwork9.html"><img src="images/bridesmaid.png" alt="Art 9"></a>
+                    <p class="art-title">"Fan Bouquet Bridesmaid"</p>
+                    <p class="art-title">₱450.00</p>
+                    <br>
+                </div>
+            </div>
         </div>
-        <div class="gallery">
-            <div class="art-item" data-name="Filipino Flag Earring">
-                <br>
-                <a href="craftwork1.html"><img src="images/phearring.png" alt="Art 1"></a>
-                <p class="art-title">"Filipino Flag Earring"</p>
-                <p class="art-title">₱800.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Pine Needle Basket">
-                <br>
-                <a href="craftwork2.html"><img src="images/pinebasket.png" alt="Art 2"></a>
-                <p class="art-title">"Pine Needle Basket"</p>
-                <p class="art-title">₱300.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Embroidered Hand Fan">
-                <br>
-                <a href="craftwork3.html"><img src="images/handfan.png" alt="Art 3"></a>
-                <p class="art-title">"Embroidered Hand Fan"</p>
-                <p class="art-title">₱120.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Sheep Wool Shawl ">
-                <br>
-                <a href="craftwork4.html"><img src="images/shawl.png" alt="Art 4"></a>
-                <p class="art-title">"Sheep Wool Shawl"</p>
-                <p class="art-title">₱499.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="PH Metal Badge">
-                <br>
-                <a href="craftwork5.html"><img src="images/metalbadge.png" alt="Art 5"></a>
-                <p class="art-title">"PH Metal Badge"</p>
-                <p class="art-title">₱400.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Lace Parol">
-                <br>
-                <a href="craftwork6.html"><img src="images/parol.png" alt="Art 6"></a>
-                <p class="art-title">"Lace Parol"</p>
-                <p class="art-title">₱230.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Wall Decoration">
-                <br>
-                <a href="craftwork7.html"><img src="images/walldecor.png" alt="Art 7"></a>
-                <p class="art-title">"Wall Decoration"</p>
-                <p class="art-title">₱250.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Woven Wonders">
-                <br>
-                <a href="craftwork8.html"><img src="images/wovenwonders.png" alt="Art 8"></a>
-                <p class="art-title">"Woven Wonders"</p>
-                <p class="art-title">₱300.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Fan Bouquet Bridesmaid">
-                <br>
-                <a href="craftwork9.html"><img src="images/bridesmaid.png" alt="Art 9"></a>
-                <p class="art-title">"Fan Bouquet Bridesmaid"</p>
-                <p class="art-title">₱450.00</p>
-                <br>
-            </div>
+        <div class="footer-div">
         </div>
-    </div>
-    <div class="footer-div">
-    </div>
-
-    <script>
-        function navigateToPage() {
-            var select = document.getElementById("pageSelect");
-            var url = select.value;
-            if (url) {
-                window.location.href = url;
+    
+        <script>
+            function navigateToPage() {
+                var select = document.getElementById("pageSelect");
+                var url = select.value;
+                if (url) {
+                    window.location.href = url;
+                }
             }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.getElementById('searchInput');
-            const artItems = document.querySelectorAll('.art-item');
-
-            searchInput.addEventListener('input', (e) => {
-                const searchTerm = e.target.value.toLowerCase();
-
-                artItems.forEach(item => {
-                    const name = item.getAttribute('data-name').toLowerCase();
-                    const titleElement = item.querySelector('.art-title');
-                    const title = titleElement ? titleElement.textContent.toLowerCase().replace(/"/g, '') : '';
-                    
-                    const isVisible = name.includes(searchTerm) || title.includes(searchTerm);
-                    
-                    item.classList.toggle('hidden', !isVisible);
+    
+            document.addEventListener('DOMContentLoaded', () => {
+                const searchInput = document.getElementById('searchInput');
+                const artItems = document.querySelectorAll('.art-item');
+    
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.toLowerCase();
+    
+                    artItems.forEach(item => {
+                        const name = item.getAttribute('data-name').toLowerCase();
+                        const titleElement = item.querySelector('.art-title');
+                        const title = titleElement ? titleElement.textContent.toLowerCase().replace(/"/g, '') : '';
+                        
+                        const isVisible = name.includes(searchTerm) || title.includes(searchTerm);
+                        
+                        item.classList.toggle('hidden', !isVisible);
+                    });
                 });
             });
-        });
-    </script>
+        </script>
+    </div>
 </body>
 </html>

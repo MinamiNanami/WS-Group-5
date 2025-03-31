@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filipino Flag Inspired ear piercing - Palette</title>
+    <title>PH Pallete</title>
     <link rel="stylesheet" href="productpageStyle.css">
-
 </head>
-
 <body>
-    <header>
-        <nav class="nav-bar">
+    <div class="main-container">
+        <div class="header">
             <div class="home-logo">
                 <a href="homepage.html">
                     <img src="images/home.png" alt="">
@@ -21,39 +18,40 @@
                 <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
             </div>
             <div class="nav-container">
-                <a href="contact.html">Contact Us</a>
-                <a href="team.html">About Us</a>
-                <a href="artist.html">Artist</a>
+                <a href="contact.html">CONTACT US</a>
+                <a href="team.html">ABOUT US</a>
+                <a href="artist.html">ARTIST</a>
                 <select id="pageSelect" onchange="navigateToPage()">
                     <option value="" disabled selected> CATEGORY </option>
                     <option value="painting.html">Paintings</option>
                     <option value="sculptures.html">Sculptures</option>
                     <option value="crafts.html">Crafts</option>
                 </select>           
-                <a href="cart.html">Cart</a>
+                <a href="cart.html">CART</a>
             </div>
-            <a href="#" id="home">
+            <a href="userprofile.html" id="home">
                 <div id="home-img-border">
                     <img src="images/proficon.png">
                 </div>
             </a>
-        </nav>
-    </header>
-
+        </div>
+    </div>
     <div class="back-button">
         <a href="sculptures.html">
-        ←
+            <img src="images/return.png" alt="">
         </a>
     </div>
 
-    <div class="main-container">
+    <div class="main-container products">
         <div class="product-container">
-            <div class="price-tag">₱1,550.00</div>
             <div class="product-image">
+                <div class="price-tag">₱1,550.00</div>
                 <img src="images/malayKO.png" alt="Filipino Flag Inspired ear piercing">
             </div>
             <div class="product-title">
                 "Owl Sculpture"
+                <div class="plate-pin left"><p></p></div>
+                <div class="plate-pin right"><p></p></div>
             </div>
             <div class="button-container">
                 <button class="add-to-cart" onclick="showPopup()">ADD TO CART</button>
@@ -63,7 +61,7 @@
         </div>
 
         <div class="description-container">
-            <h2 class="section-title">Description</h2>
+            <h2 class="section-title description">Description</h2>
             <p class="description-text">
                 Filipino ear piercing designs blend indigenous, colonial, and modern influences, featuring elements like
                 tribal engravings, gold hoops, and pearl studs. Traditional styles often showcase nature-inspired

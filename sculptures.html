@@ -1,184 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painting page</title>
+    <title>PH Pallete</title>
     <link rel="stylesheet" href="paintingStyle.css">
-    <!--<style>
-        .main-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            justify-content: center;
-        }
-        .art-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            border: 1px solid #ddd;
-            padding: 10px;
-            max-width: 300px;
-        }
-        .art-item img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-        }
-        .art-item.hidden {
-            display: none !important;
-        }
-    </style>-->
 </head>
-
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="home-logo">
-                <a href="homepage.html">
-                    <img src="images/home.png" alt="">
+    <div class="main-container">
+        <div class="section-one">
+            <div class="header">
+                <div class="home-logo">
+                    <a href="homepage.html">
+                        <img src="images/home.png" alt="">
+                    </a>
+                </div>
+                <div class="logo">
+                    <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
+                </div>
+                <div class="nav-container">
+                    <a href="contact.html">CONTACT US</a>
+                    <a href="team.html">ABOUT US</a>
+                    <a href="artist.html">ARTIST</a>
+                    <select id="pageSelect" onchange="navigateToPage()">
+                        <option value="" disabled selected> CATEGORY </option>
+                        <option value="painting.html">Paintings</option>
+                        <option value="sculptures.html">Sculptures</option>
+                        <option value="crafts.html">Crafts</option>
+                    </select>           
+                    <a href="cart.html">CART</a>
+                </div>
+                <a href="userprofile.html" id="home">
+                    <div id="home-img-border">
+                        <img src="images/proficon.png">
+                    </div>
                 </a>
             </div>
-            <div class="logo">
-                <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
-            </div>
-            <div class="nav-container">
-                <a href="contact.html">Contact Us</a>
-                <a href="team.html">About Us</a>
-                <a href="artist.html">Artist</a>
-                <select id="pageSelect" onchange="navigateToPage()">
-                    <option value="" disabled selected> CATEGORY </option>
-                    <option value="painting.html">Paintings</option>
-                    <option value="sculptures.html">Sculptures</option>
-                    <option value="crafts.html">Crafts</option>
-                </select>
-                <a href="cart.html">Cart</a>
-            </div>
-            <a href="userprofile.html" id="home">
-                <div id="home-img-border">
-                    <img src="images/proficon.png">
+            <div class="header-content">
+                <h2>TRANSFORM YOUR SPACE WITH TIMELESS ARTISTRY—<br>
+                    BRING HOME A SCULPTURE THAT SPEAKS TO YOUR SOUL!</h2>
+                <input type="text" class="search-bar" placeholder="Search..." id="searchInput">
+    
+                <div class="logo-container">
+                    <img src="images/PHpalleteLogo.png" alt="Palette Logo" class="logo">
+                    <p>Art Gallery and Marketplace for Showcasing Filipino Artistry</p>
                 </div>
-            </a>
-        </nav>
-        <div class="header-content">
-            <h2>A FEAST FOR THE EYES - EXPLORE STUNNING ARTWORKS<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THAT
-                CAPTIVATE AND INSPIRE.</h2>
-            <input type="text" class="search-bar" placeholder="Search..." id="searchInput">
-
-            <div class="logo-container">
-                <img src="images/PHpalleteLogo.png" alt="Palette Logo" class="logo">
-                <p>Art Gallery and Marketplace for Showcasing Filipino Artistry</p>
             </div>
         </div>
-    </header>
-    <div class="main-section">
-        <div class="gallery-title">
-            <h3> Sculptures </h3>
+        <div class="main-section">
+            <div class="gallery-title">
+                <h3> Sculptures </h3>
+            </div>
+            <div class="gallery">
+                <div class="art-item" data-name="Nevertheless">
+                    <br>
+                    <a href="sculpture1.html"><img src="images/flowerBase.png" alt="Art 1"></a>
+                    <p class="art-title">"Nevertheless"</p>
+                    <p class="art-title">₱10,000.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Abstract Wood Sculpture">
+                    <br>
+                    <a href="sculpture2.html"><img src="images/dikoalam.png" alt="Art 2"></a>
+                    <p class="art-title">"Abstract Wood Sculpture"</p>
+                    <p class="art-title">₱3,600.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Space and Shape">
+                    <br>
+                    <a href="sculpture3.html"><img src="images/spaceandshape.png" alt="Art 3"></a>
+                    <p class="art-title">"Space and Shape"</p>
+                    <p class="art-title">₱2,599.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Owl Sculpture ">
+                    <br>
+                    <a href="sculpture4.html"><img src="images/malayKO.png" alt="Art 4"></a>
+                    <p class="art-title">"Owl Sculpture"</p>
+                    <p class="art-title">₱1,550.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Metal Sculpture">
+                    <br>
+                    <a href="sculpture5.html"><img src="images/metalSculpture.png" alt="Art 5"></a>
+                    <p class="art-title">"Metal Sculpture"</p>
+                    <p class="art-title">₱2,350.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Bicycling People">
+                    <br>
+                    <a href="sculpture6.html" style="background-color: white; align-items: flex-end;"><img src="images/nagbbike.png" alt="Art 6" style="height: 80%;"></a>
+                    <p class="art-title">"Bicycling People"</p>
+                    <p class="art-title">₱1,200.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Nobody">
+                    <br>
+                    <a href="sculpture7.html"><img src="images/nobody.png" alt="Art 7"></a>
+                    <p class="art-title">"Nobody"</p>
+                    <p class="art-title">₱1,600.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Observe">
+                    <br>
+                    <a href="sculpture8.html"><img src="images/observe.png" alt="Art 8"></a>
+                    <p class="art-title">"Observe"</p>
+                    <p class="art-title">₱3,499.00</p>
+                    <br>
+                </div>
+                <div class="art-item" data-name="Wood Sculpture">
+                    <br>
+                    <a href="sculpture9.html"><img src="images/wood.png" alt="Art 9"></a>
+                    <p class="art-title">"Wood Sculpture"</p>
+                    <p class="art-title">₱5,750.00</p>
+                    <br>
+                </div>
+            </div>
         </div>
-        <div class="gallery">
-            <div class="art-item" data-name="Nevertheless">
-                <br>
-                <a href="sculpture1.html"><img src="images/flowerBase.png" alt="Art 1"></a>
-                <p class="art-title">"Nevertheless"</p>
-                <p class="art-title">₱10,000.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Abstract Wood Sculpture">
-                <br>
-                <a href="sculpture2.html"><img src="images/dikoalam.png" alt="Art 2"></a>
-                <p class="art-title">"Abstract Wood Sculpture"</p>
-                <p class="art-title">₱3,600.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Space and Shape">
-                <br>
-                <a href="sculpture3.html"><img src="images/spaceandshape.png" alt="Art 3"></a>
-                <p class="art-title">"Space and Shape"</p>
-                <p class="art-title">₱2,599.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Owl Sculpture ">
-                <br>
-                <a href="sculpture4.html"><img src="images/malayKO.png" alt="Art 4"></a>
-                <p class="art-title">"Owl Sculpture"</p>
-                <p class="art-title">₱1,550.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Metal Sculpture">
-                <br>
-                <a href="sculpture5.html"><img src="images/metalSculpture.png" alt="Art 5"></a>
-                <p class="art-title">"Metal Sculpture"</p>
-                <p class="art-title">₱2,350.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Bicycling People">
-                <br>
-                <a href="sculpture6.html"><img src="images/nagbbike.png" alt="Art 6"></a>
-                <p class="art-title">"Bicycling People"</p>
-                <p class="art-title">₱1,200.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Nobody">
-                <br>
-                <a href="sculpture7.html"><img src="images/nobody.png" alt="Art 7"></a>
-                <p class="art-title">"Nobody"</p>
-                <p class="art-title">₱1,600.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Observe">
-                <br>
-                <a href="sculpture8.html"><img src="images/observe.png" alt="Art 8"></a>
-                <p class="art-title">"Observe"</p>
-                <p class="art-title">₱3,499.00</p>
-                <br>
-            </div>
-            <div class="art-item" data-name="Wood Sculpture">
-                <br>
-                <a href="sculpture9.html"><img src="images/wood.png" alt="Art 9"></a>
-                <p class="art-title">"Wood Sculpture"</p>
-                <p class="art-title">₱5,750.00</p>
-                <br>
-            </div>
+        <div class="footer-div">
         </div>
-    </div>
-    <div class="footer-div">
-    </div>
-
-    <script>
-        function navigateToPage() {
-            var select = document.getElementById("pageSelect");
-            var url = select.value;
-            if (url) {
-                window.location.href = url;
+    
+        <script>
+            function navigateToPage() {
+                var select = document.getElementById("pageSelect");
+                var url = select.value;
+                if (url) {
+                    window.location.href = url;
+                }
             }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.getElementById('searchInput');
-            const artItems = document.querySelectorAll('.art-item');
-
-            searchInput.addEventListener('input', (e) => {
-                const searchTerm = e.target.value.toLowerCase();
-
-                artItems.forEach(item => {
-                    const name = item.getAttribute('data-name').toLowerCase();
-                    const titleElement = item.querySelector('.art-title');
-                    const title = titleElement ? titleElement.textContent.toLowerCase().replace(/"/g, '') : '';
-                    
-                    const isVisible = name.includes(searchTerm) || title.includes(searchTerm);
-                    
-                    item.classList.toggle('hidden', !isVisible);
+    
+            document.addEventListener('DOMContentLoaded', () => {
+                const searchInput = document.getElementById('searchInput');
+                const artItems = document.querySelectorAll('.art-item');
+    
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.toLowerCase();
+    
+                    artItems.forEach(item => {
+                        const name = item.getAttribute('data-name').toLowerCase();
+                        const titleElement = item.querySelector('.art-title');
+                        const title = titleElement ? titleElement.textContent.toLowerCase().replace(/"/g, '') : '';
+                        
+                        const isVisible = name.includes(searchTerm) || title.includes(searchTerm);
+                        
+                        item.classList.toggle('hidden', !isVisible);
+                    });
                 });
             });
-        });
-    </script>
+        </script>
+    </div>
 </body>
 </html>
