@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist page</title>
+    <title>PH Pallete</title>
     <link rel="stylesheet" href="artistStyle.css">
 </head>
-
 <body>
-    <header>
-        <nav class="nav-bar">
+    <div class="main-container">
+        <div class="header">
             <div class="home-logo">
                 <a href="homepage.html">
                     <img src="images/home.png" alt="">
@@ -20,35 +18,33 @@
                 <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
             </div>
             <div class="nav-container">
-                <a href="contact.html">Contact Us</a>
-                <a href="team.html">About Us</a>
-                <a href="artist.html">Artist</a>
+                <a href="contact.html">CONTACT US</a>
+                <a href="team.html">ABOUT US</a>
+                <a href="artist.html">ARTIST</a>
                 <select id="pageSelect" onchange="navigateToPage()">
                     <option value="" disabled selected> CATEGORY </option>
                     <option value="painting.html">Paintings</option>
                     <option value="sculptures.html">Sculptures</option>
                     <option value="crafts.html">Crafts</option>
                 </select>           
-                <a href="cart.html">Cart</a>
+                <a href="cart.html">CART</a>
             </div>
-            <a href="cart.html" id="home">
+            <a href="userprofile.html" id="home">
                 <div id="home-img-border">
                     <img src="images/proficon.png">
                 </div>
             </a>
-        </nav>
+        </div>
         <div class="header-content">
             <h2>Recognizing the artworks of local artists celebrates their creativity, preserves <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;our
                 culture, and inspires our community</h2>
-
+    
             <div class="logo-container">
                 <img src="images/PHpalleteLogo.png" alt="Palette Logo" class="logo">
                 <p>Art Gallery and Marketplace for Showcasing Filipino Artistry</p>
             </div>
         </div>
-    </header>
-    <div class="main-section">
         <div class="gallery-title">
             <h3> Artists </h3>
         </div>
@@ -56,16 +52,14 @@
                 <!-- Artist 1 - Stephanie -->
                 <div class="artist-card">
                     <div class="artwork-frame">
-                        <div class="frame-pin pin-top-left"></div>
-                        <div class="frame-pin pin-top-right"></div>
-                        <div class="frame-pin pin-bottom-left"></div>
-                        <div class="frame-pin pin-bottom-right"></div>
+                        <div class="frame-pin pin-top-left"><div class="line"></div></div>
+                        <div class="frame-pin pin-top-right"><div class="line"></div></div>
                         <a href="artist1.html"><img src="images/stephanie.png" alt="Anime-style character with light colored hair" class="artwork"></a>
                     </div>
                     <div class="name-plate">
-                        <div class="plate-pin plate-pin-left"></div>
+                        <div class="plate-pin plate-pin-left"><p></p></div>
                         STEPHANIE
-                        <div class="plate-pin plate-pin-right"></div>
+                        <div class="plate-pin plate-pin-right"><p></p></div>
                     </div>
                     <div class="title">FREELANCER</div>
                 </div>
@@ -73,16 +67,14 @@
                 <!-- Artist 2 - Junel Plantig -->
                 <div class="artist-card">
                     <div class="artwork-frame">
-                        <div class="frame-pin pin-top-left"></div>
-                        <div class="frame-pin pin-top-right"></div>
-                        <div class="frame-pin pin-bottom-left"></div>
-                        <div class="frame-pin pin-bottom-right"></div>
+                        <div class="frame-pin pin-top-left"><div class="line"></div></div>
+                        <div class="frame-pin pin-top-right"><div class="line"></div></div>
                         <a href="artist2.html"><img src="images/junel.png" alt="Anime-style character with light colored hair" class="artwork"></a>
                     </div>
                     <div class="name-plate">
-                        <div class="plate-pin plate-pin-left"></div>
+                        <div class="plate-pin plate-pin-left"><p></p></div>
                         JUNEL PLANTIG
-                        <div class="plate-pin plate-pin-right"></div>
+                        <div class="plate-pin plate-pin-right"><p></p></div>
                     </div>
                     <div class="title">PAINTER</div>
                 </div>
@@ -90,16 +82,14 @@
                 <!-- Artist 3 - Luca Bartolome -->
                 <div class="artist-card">
                     <div class="artwork-frame">
-                        <div class="frame-pin pin-top-left"></div>
-                        <div class="frame-pin pin-top-right"></div>
-                        <div class="frame-pin pin-bottom-left"></div>
-                        <div class="frame-pin pin-bottom-right"></div>
+                        <div class="frame-pin pin-top-left"><div class="line"></div></div>
+                        <div class="frame-pin pin-top-right"><div class="line"></div></div>
                         <a href="artist3.html"><img src="images/luca.png" alt="Anime-style character with light colored hair" class="artwork"></a>
                     </div>
                     <div class="name-plate">
-                        <div class="plate-pin plate-pin-left"></div>
+                        <div class="plate-pin plate-pin-left"><p></p></div>
                         LUCA BARTOLOME
-                        <div class="plate-pin plate-pin-right"></div>
+                        <div class="plate-pin plate-pin-right"><p></p></div>
                     </div>
                     <div class="title">OIL PAINTER</div>
                 </div>
@@ -107,34 +97,21 @@
                 <!-- Artist 4 - Moises Bien Tabulado -->
                 <div class="artist-card">
                     <div class="artwork-frame">
-                        <div class="frame-pin pin-top-left"></div>
-                        <div class="frame-pin pin-top-right"></div>
-                        <div class="frame-pin pin-bottom-left"></div>
-                        <div class="frame-pin pin-bottom-right"></div>
+                        <div class="frame-pin pin-top-left"><div class="line"></div></div>
+                        <div class="frame-pin pin-top-right"><div class="line"></div></div>
                         <a href="artist4.html"><img src="images/moises.png" alt="Anime-style character with light colored hair" class="artwork"></a>
                     </div>
                     <div class="name-plate">
-                        <div class="plate-pin plate-pin-left"></div>
+                        <div class="plate-pin plate-pin-left"><p></p></div>
                         MOISES TABULADO
-                        <div class="plate-pin plate-pin-right"></div>
+                        <div class="plate-pin plate-pin-right"><p></p></div>
                     </div>
                     <div class="title">ANIMATOR</div>
                 </div>
             </div>
         </div>
-
         <div class="footer-div">
         </div>
+    </div>
 </body>
-
-<script>
-    function navigateToPage() {
-        var select = document.getElementById("pageSelect");
-        var url = select.value;
-        if (url) {
-            window.location.href = url; // Redirects to the selected page (HTML file)
-        }
-    }
-</script>
-
 </html>
