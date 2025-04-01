@@ -186,6 +186,10 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
+.art-item.hidden {
+    display: none !important;
+}
+
 .art-item a {
     display: flex;
     justify-content: center;
