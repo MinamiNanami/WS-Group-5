@@ -120,6 +120,7 @@ body::-webkit-scrollbar {
 }
 
 .section-one {
+    position: relative;
     height: 60vh;
     background: linear-gradient(to bottom, rgb(142, 141, 143) 0%, rgb(240, 240, 240) 40%, rgb(233, 233, 233) 70%, rgb(212, 212, 212) 100%);
 }
@@ -166,8 +167,9 @@ body::-webkit-scrollbar {
 
 .car-arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    align-content: center;
+    height: 35vh;
+    top: 10vh;
     font-size: 30px;
     z-index: 1000;
 }
