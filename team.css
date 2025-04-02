@@ -169,6 +169,7 @@ body::-webkit-scrollbar {
     top: 50%;
     transform: translateY(-50%);
     font-size: 30px;
+    z-index: 1000;
 }
 
 #car-prev, #car-next {
@@ -177,10 +178,12 @@ body::-webkit-scrollbar {
 
 .car-arrow.left {
     left: 20px;
+    z-index: 1000;
 }
 
 .car-arrow.right {
     right: 20px;
+    z-index: 1000;
 }
 
 .about-us-title {
