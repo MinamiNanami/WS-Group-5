@@ -124,34 +124,14 @@ header {
     height: calc(100vh - 10vh);
 }
 
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3); /* White overlay with 30% opacity */
-    pointer-events: none; /* Allows clicks to pass through to elements below */
-    z-index: 1;
-}
-
-/* Make sure the container's children are positioned above the overlay */
-.container > * {
-    position: relative;
-    z-index: 2;
-}
-
 .profile-info {
     z-index: 2;
-    left: 300px;
-    top: 120px;
 }
 
 .year {
     position: absolute;
-    top: 120px;
-    right: 300px;
+    top: 60px;
+    right: 60px;
     font-size: 35px;
     font-weight: bold;
     color: #333;
@@ -193,16 +173,27 @@ header {
 
 .change-profile {
     position: absolute;
-    bottom: 120px;
-    right: 275px;
-    background-color: rgba(255, 255, 255);
-    border: 3px solid #355E3B;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ccc;
     padding: 8px 16px;
-    border-radius: 10px;
+    border-radius: 4px;
     color: #333;
     font-size: 14px;
     cursor: pointer;
-    z-index: 2;
+}
+
+.texture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/userBG.png');
+    background-size: cover;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
 }
 
 .gender-occupation span {
