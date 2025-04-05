@@ -125,7 +125,24 @@ header {
 }
 
 .profile-info {
+    align-content: center;
     z-index: 2;
+}
+
+.image-profile {
+    position: absolute;
+    align-content: center;
+    top: 50%;
+    right: 300px;
+    height: 70%;
+    width: 22%;
+    padding: 10px;
+    transform: translateY(-50%);
+    background-color: white;
+}
+
+.image-profile img {
+    width: 100%;
 }
 
 .year {
@@ -138,19 +155,14 @@ header {
 }
 
 .artist-name {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 80px;
+    font-weight: 100;
     margin-bottom: 10px;
+    padding-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-
-.divider {
-    width: 100%;
-    max-width: 380px;
-    height: 2px;
-    background-color: #333;
-    margin-bottom: 15px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    border-bottom: 4px solid #365f42;
 }
 
 .gender-occupation {
@@ -162,22 +174,23 @@ header {
 }
 
 .contact-info {
-    margin-top: 100px;
+    margin-top: 30px;
     color: black;
 }
 
 .contact-info p {
     margin-bottom: 5px;
-    font-size: 25px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .change-profile {
     position: absolute;
     bottom: 40px;
     right: 40px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 1);
     border: 1px solid #ccc;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 4px;
     color: #333;
     font-size: 14px;
@@ -190,10 +203,9 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/userBG.png');
-    background-size: cover;
-    opacity: 0.8;
-    mix-blend-mode: multiply;
+    opacity: 1;
+    mix-blend-mode: color;
+    background-color: #FFFAEA;
 }
 
 .gender-occupation span {
