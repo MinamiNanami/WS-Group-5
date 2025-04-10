@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact page</title>
+    <title>User Profile</title>
     <link rel="stylesheet" href="userprofileStyle.css">
 </head>
 <style>
@@ -124,7 +124,6 @@
         border-radius: 50%;
     }
 
-
     .container {
         background-image: url('images/userBG.png') rgba(255, 255, 255, 0.25);
         background-size: cover;
@@ -138,63 +137,40 @@
         overflow-y: auto;
     }
 
+    /* Main profile container - left side */
     .profile-info {
-        /* Updated positioning for left middle placement */
         position: absolute;
         left: 60px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
-        padding: 40px;
-        border-radius: 10px;
         width: 600px;
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.7);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        margin-left: 150px;
     }
 
-    /* Artist picture container */
+    /* Artist picture container - positioned on right */
     .artist-picture-container {
         position: absolute;
-        left: 50%;
-        top: 30%;
-        transform: translate(-50%, -50%);
+        right: 300px;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 2;
         padding: 20px;
         border-radius: 10px;
-        width: 400px;
-        background-color: rgba(255, 255, 255, 0.7);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
+        width: 500px;
     }
 
     .artist-picture-container img {
-        width: 300px;
-        height: 300px;
-
+        width: 80%;
+        height: 80%;
     }
 
-    .artist-picture {
-        width: 280px;
-        height: 280px;
-        border-radius: 10px;
-        object-fit: cover;
-        border: 5px solid #365f42;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
 
+    /* Remove the separate bio container as it's now part of the profile-info */
     .bio-container {
-        position: absolute;
-        left: 50%;
-        top: 65%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        padding: 30px 40px;
-        border-radius: 10px;
-        width: 500px;
-        background-color: rgba(255, 255, 255, 0.7);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: none;
     }
 
     .year {
@@ -210,7 +186,7 @@
     }
 
     .artist-name {
-        font-size: 48px;
+        font-size: 65px;
         font-weight: bold;
         margin-bottom: 15px;
         text-transform: uppercase;
@@ -240,13 +216,6 @@
         flex-direction: column;
     }
 
-    .bio-section {
-        padding: 15px;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 8px;
-        border-left: 4px solid #365f42;
-    }
-
     .contact-info {
         display: flex;
         flex-direction: column;
@@ -260,12 +229,10 @@
     }
 
     #displayBio {
+        margin-top: 15px;
         font-style: italic;
         line-height: 1.6;
         font-size: 22px;
-        text-align: center;
-        padding: 10px;
-        text-transform: uppercase;
     }
 
     .change-profile {
@@ -463,7 +430,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* New styles for profile picture upload in modal */
+    /* Profile picture upload in modal */
     .profile-picture-upload {
         display: flex;
         flex-direction: column;
@@ -517,34 +484,22 @@
         }
 
         .profile-info {
-            position: absolute;
-            left: 60px;
-            top: 50%;
+            width: 90%;
+            left: 5%;
             transform: translateY(-50%);
-            z-index: 2;
-            padding: 40px;
-            border-radius: 10px;
-            width: 500px;
-            /* Slightly reduced width */
-            display: flex;
-            flex-direction: column;
-            background-color: rgba(255, 255, 255, 0.7);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .artist-picture-container {
-            width: 100%;
-            padding: 15px;
+            width: 90%;
+            right: 5%;
+            top: auto;
+            bottom: 100px;
+            transform: none;
         }
 
         .artist-picture {
             width: 220px;
             height: 220px;
-        }
-
-        .bio-container {
-            padding: 20px;
-            width: 100%;
         }
 
         .artist-name {
@@ -614,13 +569,10 @@
     <div class="container">
         <div class="texture-overlay"></div>
 
-        <div class="image-profile">
-            <img src="images/pedro-penduko.jpg" alt="Image">
-        </div>
-
+        <!-- Main profile information - left side -->
         <div class="profile-info">
             <div class="profile-section">
-                <h1 class="artist-name" id="displayName">Juan Dela Cruz</h1>
+                <h1 class="artist-name" id="displayName">JUAN DELA CRUZ</h1>
                 <div class="divider"></div>
 
                 <div class="gender-occupation">
@@ -633,22 +585,16 @@
                     <span>PAINTER</span>
                 </div>
 
-            <div class="contact-info">
-                <p id="displayEmail">juandelacruz@gmail.com</p>
-                <p id="displayAddress">Baliwag City, Bulacan</p>
-                <br>
-                <p id="displayBio">*insert Bio</p>
+                <div class="contact-info">
+                    <p id="displayEmail">juandelacruz@gmail.com</p>
+                    <p id="displayAddress">Baliwag City, Bulacan</p>
+                </div>
             </div>
         </div>
 
-        <!-- Artist picture container -->
+        <!-- Artist picture container - right side -->
         <div class="artist-picture-container">
-            <img src="" alt="" class="artist-picture" id="displayArtistPic">
-        </div>
-
-        <!-- Bio section now below the artist picture -->
-        <div class="bio-container">
-            <p id="displayBio">bio</p>
+            <img src="images/pedro-penduko.jpg" alt="Artist picture" class="artist-picture" id="displayArtistPic">
         </div>
 
         <div class="year" id="displayYear">2025</div>
@@ -662,7 +608,7 @@
             <div class="modal-header">PROFILE INFORMATION</div>
             <!-- Profile picture upload section -->
             <div class="profile-picture-upload">
-                <img src="images/artist-placeholder.jpg" alt="Profile picture preview" class="profile-picture-preview"
+                <img src="images/pedro-penduko.jpg" alt="Profile picture preview" class="profile-picture-preview"
                     id="picturePreview">
                 <label for="fileInput" class="upload-btn">Choose Picture</label>
                 <input type="file" id="fileInput" accept="image/*">
