@@ -26,6 +26,7 @@ body::-webkit-scrollbar {
     padding: 0 73px 0 71px;
     border-bottom: 5px solid #00000000;
     background-color: transparent;
+    z-index: 10000;
 }
 
 .home-logo {
@@ -176,7 +177,6 @@ body::-webkit-scrollbar {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
-    border: 2px solid red;
     /* Debugging purpose */
 
 }

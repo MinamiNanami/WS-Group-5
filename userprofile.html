@@ -173,10 +173,23 @@
         display: none;
     }
 
-    .year {
+    /* Year container styling */
+    .year-container {
         position: absolute;
         top: 60px;
         right: 60px;
+        text-align: center;
+    }
+
+    .year-label {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .year {
         font-size: 38px;
         font-weight: bold;
         color: #333;
@@ -288,7 +301,6 @@
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
-        transition: all 0.3s;
     }
 
     .modal-container {
@@ -298,12 +310,6 @@
         width: 80%;
         max-width: 600px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        transform: scale(0.95);
-        transition: transform 0.3s;
-    }
-
-    .modal-overlay.active .modal-container {
-        transform: scale(1);
     }
 
     .modal-header {
@@ -521,10 +527,17 @@
             min-height: calc(100vh - 10vh);
         }
 
-        .year {
+        .year-container {
             top: 20px;
             right: 20px;
+        }
+
+        .year {
             font-size: 28px;
+        }
+
+        .year-label {
+            font-size: 14px;
         }
 
         .change-profile {
@@ -559,7 +572,7 @@
                 </select>
                 <a href="cart.html">Cart</a>
             </div>
-            <a href="cart.html" id="home">
+            <a href="userprofile.html" id="home">
                 <div id="home-img-border">
                     <img src="images/proficon.png">
                 </div>
@@ -597,7 +610,11 @@
             <img src="images/pedro-penduko.jpg" alt="Artist picture" class="artist-picture" id="displayArtistPic">
         </div>
 
-        <div class="year" id="displayYear">2025</div>
+        <!-- Modified year display with label -->
+        <div class="year-container">
+            <div class="year-label">PROFILE SINCE</div>
+            <div class="year" id="displayYear">2025</div>
+        </div>
 
         <button class="change-profile" id="changeProfileBtn">Change Profile</button>
     </div>
@@ -620,10 +637,6 @@
             <div class="form-group">
                 <label for="emailInput">Email</label>
                 <input type="email" id="emailInput" placeholder="Enter your email" value="juandelacruz@gmail.com">
-            </div>
-            <div class="form-group">
-                <label for="bioInput">Bio</label>
-                <textarea id="bioInput" placeholder="Tell us about yourself" rows="4">*insert Bio</textarea>
             </div>
             <div class="form-group">
                 <label for="addressInput">Address</label>
@@ -649,8 +662,6 @@
         </div>
     </div>
 
-</body>
-
 <script>
     function navigateToPage() {
         var select = document.getElementById("pageSelect");
@@ -672,17 +683,9 @@
         // Elements to update
         const displayName = document.getElementById('displayName');
         const displayEmail = document.getElementById('displayEmail');
-        const displayBio = document.getElementById('displayBio');
         const displayAddress = document.getElementById('displayAddress');
         const displayYear = document.getElementById('displayYear');
         const displayArtistPic = document.getElementById('displayArtistPic');
-
-        // Form inputs
-        const nameInput = document.getElementById('nameInput');
-        const emailInput = document.getElementById('emailInput');
-        const bioInput = document.getElementById('bioInput');
-        const addressInput = document.getElementById('addressInput');
-        const yearInput = document.getElementById('yearInput');
 
         // Handle file input change for profile picture preview
         fileInput.addEventListener('change', function (event) {
@@ -701,12 +704,11 @@
             // Set current values in form
             nameInput.value = displayName.textContent;
             emailInput.value = displayEmail.textContent;
-            bioInput.value = displayBio.textContent;
             addressInput.value = displayAddress.textContent;
             yearInput.value = displayYear.textContent;
             picturePreview.src = displayArtistPic.src;
 
-            // Show modal
+            // Show modal - this is the key fix
             profileModal.style.display = 'flex';
         });
 
@@ -720,7 +722,6 @@
             // Update displayed information
             displayName.textContent = nameInput.value;
             displayEmail.textContent = emailInput.value;
-            displayBio.textContent = bioInput.value;
             displayAddress.textContent = addressInput.value;
             displayYear.textContent = yearInput.value;
             displayArtistPic.src = picturePreview.src;
@@ -738,4 +739,5 @@
     });
 </script>
 
+</body>
 </html>
