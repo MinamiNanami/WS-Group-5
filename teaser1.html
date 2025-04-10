@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Pallete</title>
+    <link rel="stylesheet" href="productpageStyle.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="home-logo">
+                <a href="homepage.html">
+                    <img src="images/home.png" alt="">
+                </a>
+            </div>
+            <div class="logo">
+                <img src="images/PHpalleteLogo.png" alt="ph-pallete-logo">
+            </div>
+            <div class="nav-container">
+                <a href="contact.html">CONTACT US</a>
+                <a href="team.html">ABOUT US</a>
+                <a href="artist.html">ARTIST</a>
+                <select id="pageSelect" onchange="navigateToPage()">
+                    <option value="" disabled selected> CATEGORY </option>
+                    <option value="painting.html">Paintings</option>
+                    <option value="sculptures.html">Sculptures</option>
+                    <option value="crafts.html">Crafts</option>
+                </select>           
+                <a href="cart.html">CART</a>
+            </div>
+            <a href="userprofile.html" id="home">
+                <div id="home-img-border">
+                    <img src="images/proficon.png">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="back-button">
+        <a href="painting.html">
+            <img src="images/return.png" alt="">
+        </a>
+    </div>
+
+    <div class="main-container painting">
+        <div class="product-container">
+            <div class="product-image">
+                <div class="price-tag">₱13,000.00</div>
+                <img src="images/palosebo.png" alt="Filipino Flag Inspired ear piercing">
+            </div>
+            <div class="product-title">
+                "Palosebo"
+                <div class="plate-pin left"><p></p></div>
+                <div class="plate-pin right"><p></p></div>
+            </div>
+            <div class="button-container">
+                <button class="add-to-cart" onclick="showPopup()">ADD TO CART</button>
+                <a href="payment.html"><button class="buy-now">BUY NOW</button></a>
+                
+            </div>
+        </div>
+
+        <div class="description-container">
+            <h2 class="section-title description">Description</h2>
+            <p class="description-text">
+                Filipino ear piercing designs blend indigenous, colonial, and modern influences, featuring elements like
+                tribal engravings, gold hoops, and pearl studs. Traditional styles often showcase nature-inspired
+                patterns or materials like wood, shells, and beads, reflecting the country's rich cultural heritage.
+                Contemporary designs incorporate Baybayin script, sun-and-stars motifs, and minimalist wave or fan
+                shapes, symbolizing Filipino identity and artistry.
+            </p>
+
+            <h2 class="section-title">Materials</h2>
+            <div class="materials">
+                <p>14¼×21¼in. - 37.5×54.9cm</p>
+                <p>Watercolour on 140lb/300gsm paper</p>
+            </div>
+
+            <div class="artist-section">
+                <h2 class="section-title">Artist</h2>
+                <div class="artist-name">JUAN DELA CRUZ</div>
+            </div>
+        </div>
+    </div>
+    <div id="popupOverlay" class="overlay">
+        <div class="popup-container">
+            <p>ADDED TO CART</p>
+            <div class="align">
+                <div class="checkmark-container">
+                    <span class="checkmark">&#10004;</span> <!-- Unicode checkmark -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function navigateToPage() {
+        var select = document.getElementById("pageSelect");
+        var url = select.value;
+        if (url) {
+            window.location.href = url; // Redirects to the selected page (HTML file)
+        }
+    }
+
+    function showPopup() {
+        var popup = document.getElementById("popupOverlay");
+        popup.classList.add("show");
+
+        // Auto-close after 3 seconds
+        setTimeout(closePopup, 1000);
+    }
+
+    function closePopup() {
+        var popup = document.getElementById("popupOverlay");
+        popup.classList.remove("show");
+    }
+    </script>
+
+</html>
