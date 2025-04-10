@@ -25,8 +25,6 @@ body::-webkit-scrollbar {
     width: 100%;
     padding: 0 73px 0 71px;
     border-bottom: 5px solid #00000000;
-    background-color: transparent;
-    z-index: 10000;
 }
 
 .home-logo {
@@ -57,6 +55,7 @@ body::-webkit-scrollbar {
     align-items: center;
     height: 100%;
     width: 58.6%;
+    z-index: 10000;
 }
 
 .header select {
@@ -96,6 +95,7 @@ body::-webkit-scrollbar {
     height: 100%;
     aspect-ratio: 1/1;
     margin: 0 -3px -3px 47px;
+    z-index: 10000;
 }
 
 #home-img-border {
