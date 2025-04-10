@@ -283,10 +283,12 @@ select option {
     height: 100%;
     aspect-ratio: 1/1;
     transform: scale(1.08);
+    cursor: pointer;
 }
 
 .featured img {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .caption {

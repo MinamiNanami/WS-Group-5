@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PH Pallete</title>
     <link rel="stylesheet" href="productpageStyle.css">
 </head>
+
 <body>
     <div class="main-container">
         <div class="header">
@@ -26,7 +28,7 @@
                     <option value="painting.html">Paintings</option>
                     <option value="sculptures.html">Sculptures</option>
                     <option value="crafts.html">Crafts</option>
-                </select>           
+                </select>
                 <a href="cart.html">CART</a>
             </div>
             <a href="userprofile.html" id="home">
@@ -37,21 +39,25 @@
         </div>
     </div>
     <div class="back-button">
-        <a href="sculptures.html">
+        <a href="painting.html">
             <img src="images/return.png" alt="">
         </a>
     </div>
 
-    <div class="main-container products">
+    <div class="main-container painting">
         <div class="product-container">
             <div class="product-image">
-                <div class="price-tag">₱2,599.00</div>
-                <img src="images/spaceandshape.png" alt="Space and Shape">
+                <div class="price-tag">₱13,000.00</div>
+                <img src="images/craftsnecklace.png" alt="Beads of Harmony">
             </div>
             <div class="product-title">
-                "Space and Shape"
-                <div class="plate-pin left"><p></p></div>
-                <div class="plate-pin right"><p></p></div>
+                "Beads of Harmony"
+                <div class="plate-pin left">
+                    <p></p>
+                </div>
+                <div class="plate-pin right">
+                    <p></p>
+                </div>
             </div>
             <div class="button-container">
                 <button class="add-to-cart" onclick="showPopup()">ADD TO CART</button>
@@ -63,7 +69,12 @@
         <div class="description-container">
             <h2 class="section-title description">Description</h2>
             <p class="description-text">
-                This sculpture, titled "Space and Shape," is a modern masterpiece that explores the interplay between geometric forms and negative space. Its intricate design and craftsmanship make it a standout piece for any art collection or interior space.
+                This necklace is a stunning piece of jewelry that features a beautiful combination of natural materials.
+                The beads are made from a variety of stones, including turquoise, amethyst, and rose quartz, which are
+                known for their healing properties. The necklace is designed to be worn as a statement piece or layered
+                with other necklaces for a more bohemian look. Each bead is carefully selected and strung together to
+                create a unique and eye-catching design. The necklace is finished with a durable clasp that ensures it
+                stays securely in place while you wear it.
             </p>
 
             <h2 class="section-title">Materials</h2>
@@ -111,6 +122,6 @@
         var popup = document.getElementById("popupOverlay");
         popup.classList.remove("show");
     }
-    </script>
+</script>
 
 </html>
